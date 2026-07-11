@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
+    <meta
+      name="description"
+      content="Sam & Co is a premier international consulting firm delivering executive advisory, transformation, and training services across Canada, USA, UK, Saudi Arabia, and UAE. Book a consultation today."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large"
+    />
+    <link rel="canonical" href="https://www.samandco.ca/" />
+    <meta name="author" content="Sam & Co" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.samandco.ca/" />
+    <meta
+      property="og:title"
+      content="Sam & Co - International Consulting & Advisory Firm"
+    />
+    <meta
+      property="og:description"
+      content="Premier international consulting firm delivering executive advisory, transformation, and training services across North America, Europe, and the Middle East."
+    />
+    <meta
+      property="og:image"
+      content="https://www.samandco.ca/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Sam & Co - International Consulting Firm"
+    />
+    <meta property="og:site_name" content="Sam & Co" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.samandco.ca/" />
+    <meta
+      name="twitter:title"
+      content="Sam & Co - International Consulting & Advisory Firm"
+    />
+    <meta
+      name="twitter:description"
+      content="Premier international consulting firm delivering executive advisory, transformation, and training services globally."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.samandco.ca/assets/images/twitter-image.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Sam & Co - International Consulting Firm"
+    />
+    <meta name="twitter:site" content="@SamAndCo" />
+    <meta name="twitter:creator" content="@SamAndCo" />
+
+    <meta name="theme-color" content="#204163" />
+    <meta name="application-name" content="Sam & Co" />
+    <meta name="apple-mobile-web-app-title" content="Sam & Co" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <title>Home | Sam & Co.</title>
+
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="assets/icons/fb4781_11cbe26873a74c13adb2aa1554076e2b~mv2.png"
+      type="image/png"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/fb4781_11cbe26873a74c13adb2aa1554076e2b~mv21.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/icons/fb4781_11cbe26873a74c13adb2aa1554076e2b~mv22.png"
+      type="image/png"
+    />
+
+    <!-- Preload the LCP hero image for faster paint -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=2400&auto=format&fit=crop"
+      fetchpriority="high"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #204163;
+        --color-secondary: #fd6e3c;
+        --color-secondary-deep: #d6551f; /* AA-safe variant for solid CTA buttons */
+        --color-white: #ffffff;
+        --color-black: #000000;
+        --color-light: #fdf3e0;
+        --color-dark: #090909;
+        --color-accent: #292b2f;
+
+        --font-DM-Serif-Display: "DM Serif Display", serif;
+        --font-DM-Sans: "DM Sans", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Preloader + skip-link render statically on every page (not fetched) so they're
+         visible on first paint, before main.js or the header/footer includes run. -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-primary"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="flex flex-col items-center gap-4">
+        <span class="font-display text-2xl text-white"
+          >Sam <span class="text-secondary">&</span> Co</span
+        >
+        <span class="preloader-bar h-0.5 w-32 rounded-full bg-white/15">
+          <span class="preloader-bar-fill"></span>
+        </span>
+        <span class="sr-only">Loading</span>
+      </div>
+    </div>
+
+    <!-- Header is injected here from partials/header.html by js/main.js -->
+    <header class="site-header sticky top-0 z-50 bg-primary py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <div class="logo">
+          <a href="./index.html" aria-label="Sam & Co home">
+            <img
+              src="./assets/images/logo.png"
+              alt="Sam & Co"
+              title="Sam & Co"
+              class="lg:h-14 h-9 w-auto"
+            />
+          </a>
+        </div>
+
+        <nav
+          class="navbar-section hidden items-center space-x-6 lg:flex"
+          aria-label="Primary"
+        >
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./partners.html"
+                >Partners</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./approach.html"
+                >Approach</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./approach.html"
+                >Insights</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./contact.html"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./careers.html"
+                >Careers</a
+              >
+            </li>
+          </ul>
+          <a
+            class="rounded-md xl:text-lg text-sm bg-secondary-deep px-4 py-2 font-semibold text-white transition-colors duration-300 border border-transparent hover:bg-white hover:text-primary"
+            href="./contact.html"
+            >Book a Consultation</a
+          >
+        </nav>
+
+        <!-- Mobile menu toggle -->
+        <button
+          id="menu-toggle"
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-md text-white lg:hidden cursor-pointer"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <svg
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile drawer backdrop -->
+    <div id="mobile-menu-backdrop"></div>
+
+    <!-- Mobile drawer (slides in from the right) -->
+    <aside id="mobile-menu" aria-hidden="true">
+      <div
+        class="flex items-center justify-between border-b border-white/10 px-6 py-5"
+      >
+        <span class="font-display text-lg text-white">Menu</span>
+        <button
+          id="menu-close"
+          type="button"
+          aria-label="Close menu"
+          class="flex h-9 w-9 items-center justify-center rounded-md text-white hover:bg-white/10"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        class="flex flex-1 flex-col justify-between px-6 py-8"
+        aria-label="Mobile"
+      >
+        <ul class="flex flex-col space-y-1">
+          <li class="drawer-link drawer-link-1">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./index.html"
+              >Home</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./about.html"
+              >About</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./partners.html"
+              >Partners</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-3">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./services.html"
+              >Services</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./approach.html"
+              >Approach</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./insights.html"
+              >Insights</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-4">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./contact.html"
+              >Contact</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./careers.html"
+              >Careers</a
+            >
+          </li>
+        </ul>
+        <a
+          class="drawer-link drawer-link-5 mt-8 block rounded-md bg-secondary-deep px-4 py-3 text-center font-semibold text-white"
+          href="./contact.html"
+          >Book a Consultation</a
+        >
+      </nav>
+    </aside>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Sam & Co",
+        "description": "Premier international consulting firm delivering executive advisory, transformation, and training services.",
+        <!-- "url": "https://www.samandco.ca/", -->
+        "telephone": "+1(647) 360-7622",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "151 Yonge Street, Suite 1100",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/sam-co-ca/",
+          "https://www.instagram.com/samandco.consulting.ca/"
+        ],
+        "areaServed": [
+          "Canada",
+          "United States",
+          "United Kingdom",
+          "Saudi Arabia",
+          "United Arab Emirates"
+        ]
+      }
+    </script>
+
+    <main id="main-content">
+      <section class="hero-slider relativew-full overflow-hidden">
+        <div class="swiper hero-swiper h-full w-full">
+          <div class="swiper-wrapper">
+            <!-- Slide 1: headline + subhead + consultation CTA + video asset (Toronto skyline) -->
+            <div
+              class="swiper-slide"
+              data-label="Executive Advisory"
+              style="background-color: #204163"
+            >
+              <video
+                class="kenburns absolute inset-0 h-full w-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=2400&auto=format&fit=crop"
+                aria-hidden="true"
+              >
+                <source src="./assets/videos/hero-reel.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute inset-0 bg-primary/70"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-primary/30"
+              ></div>
+              <div class="relative z-10 flex h-full items-center">
+                <div class="container mx-auto px-4">
+                  <p
+                    class="mb-5 inline-block rounded-full border border-white/30 px-4 py-1.5 text-sm font-medium tracking-wide text-light"
+                  >
+                    Advisory · Transformation · Training
+                  </p>
+                  <h1 class="hero-headline font-display max-w-3xl text-white">
+                    Executive consulting, built for how organizations actually
+                    change.
+                  </h1>
+                  <p class="mt-6 max-w-xl text-base text-light sm:text-lg">
+                    Sam & Co partners with leaders across Canada, the US, the
+                    UK, Saudi Arabia, and the UAE to diagnose what's holding
+                    growth back — and deliver the plan to fix it.
+                  </p>
+                  <div class="mt-9 flex flex-wrap items-center gap-5">
+                    <a
+                      href="./contact.html"
+                      class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+                      >Book a Consultation</a
+                    >
+                    <button
+                      type="button"
+                      class="watch-video-btn group flex items-center gap-3 text-white cursor-pointer"
+                      aria-haspopup="dialog"
+                    >
+                      <span
+                        class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-colors duration-300 group-hover:bg-white group-hover:text-primary"
+                      >
+                        <svg
+                          class="ml-0.5 h-4 w-4"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </span>
+                      <span class="font-semibold">Watch Our Story</span>
+                    </button>
+                  </div>
+                  <a
+                    href="./services.html"
+                    class="mt-5 inline-block text-sm font-medium text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white"
+                    >Explore Services →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: headline + subhead + consultation CTA + media (Canadian landscape) -->
+            <div
+              class="swiper-slide"
+              data-label="Transformation Delivery"
+              style="background-color: #d6551f"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2400&auto=format&fit=crop"
+                alt="Canadian mountain and lake landscape"
+                class="kenburns absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-primary/70"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-primary/30"
+              ></div>
+              <div class="relative z-10 flex h-full items-center">
+                <div class="container mx-auto px-4">
+                  <p
+                    class="mb-5 inline-block rounded-full border border-white/30 px-4 py-1.5 text-sm font-medium tracking-wide text-light"
+                  >
+                    Advisory · Transformation · Training
+                  </p>
+                  <h1 class="hero-headline font-display max-w-3xl text-white">
+                    From boardroom strategy to on-the-ground delivery.
+                  </h1>
+                  <p class="mt-6 max-w-xl text-base text-light sm:text-lg">
+                    We don't hand off after the recommendation. Our advisors
+                    stay through implementation, on-site, until the change
+                    actually sticks.
+                  </p>
+                  <div class="mt-9 flex flex-wrap items-center gap-5">
+                    <a
+                      href="./contact.html"
+                      class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+                      >Book a Consultation</a
+                    >
+                    <button
+                      type="button"
+                      class="watch-video-btn group flex items-center gap-3 text-white"
+                      aria-haspopup="dialog"
+                    >
+                      <span
+                        class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-colors duration-300 group-hover:bg-white group-hover:text-primary"
+                      >
+                        <svg
+                          class="ml-0.5 h-4 w-4"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </span>
+                      <span class="font-semibold">Watch Our Story</span>
+                    </button>
+                  </div>
+                  <a
+                    href="./services.html"
+                    class="mt-5 inline-block text-sm font-medium text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white"
+                    >Explore Services →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: headline + subhead + consultation CTA + media (international business district) -->
+            <div
+              class="swiper-slide"
+              data-label="Global Collaboration"
+              style="background-color: #292b2f"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2400&auto=format&fit=crop"
+                alt="Modern international business district"
+                class="kenburns absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-primary/70"></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-primary/30"
+              ></div>
+              <div class="relative z-10 flex h-full items-center">
+                <div class="container mx-auto px-4">
+                  <p
+                    class="mb-5 inline-block rounded-full border border-white/30 px-4 py-1.5 text-sm font-medium tracking-wide text-light"
+                  >
+                    Advisory · Transformation · Training
+                  </p>
+                  <h1 class="hero-headline font-display max-w-3xl text-white">
+                    One senior team. Five international markets.
+                  </h1>
+                  <p class="mt-6 max-w-xl text-base text-light sm:text-lg">
+                    Toronto-based, working directly across the US, the UK, Saudi
+                    Arabia, and the UAE — with the regulatory and cultural
+                    fluency each market demands.
+                  </p>
+                  <div class="mt-9 flex flex-wrap items-center gap-5">
+                    <a
+                      href="./contact.html"
+                      class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+                      >Book a Consultation</a
+                    >
+                    <button
+                      type="button"
+                      class="watch-video-btn group flex items-center gap-3 text-white"
+                      aria-haspopup="dialog"
+                    >
+                      <span
+                        class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-colors duration-300 group-hover:bg-white group-hover:text-primary"
+                      >
+                        <svg
+                          class="ml-0.5 h-4 w-4"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </span>
+                      <span class="font-semibold">Watch Our Story</span>
+                    </button>
+                  </div>
+                  <a
+                    href="./services.html"
+                    class="mt-5 inline-block text-sm font-medium text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white hover:decoration-white"
+                    >Explore Services →</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute inset-x-0 bottom-8 z-30 flex items-center justify-center gap-6"
+        >
+          <button
+            type="button"
+            id="hero-prev"
+            class="hero-nav-btn cursor-pointer"
+            aria-label="Previous slide"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <span
+            id="hero-indicator"
+            class="text-center text-sm font-medium tracking-wide text-white"
+            aria-live="polite"
+            >01 / 03 — Executive Advisory</span
+          >
+          <button
+            type="button"
+            id="hero-next"
+            class="hero-nav-btn cursor-pointer"
+            aria-label="Next slide"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Video lightbox (opened by "Watch Our Story") -->
+      <div
+        id="video-modal"
+        class="fixed inset-0 z-[90] hidden items-center justify-center bg-dark/80 p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Sam & Co video"
+      >
+        <div class="relative w-full max-w-3xl h-1/2 md:h-2/3 lg:h-3/4">
+          <button
+            id="video-modal-close"
+            type="button"
+            aria-label="Close video"
+            class="absolute -top-11 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <!-- Same placeholder file as the hero; swap both together once real footage is supplied -->
+          <video
+            id="modal-video"
+            class="w-full rounded-lg h-full object-cover shadow-lg"
+            controls
+            playsinline
+            poster="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=2400&auto=format&fit=crop"
+          >
+            <source src="./assets/videos/hero-reel.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- ============ QUICK EXPLORE (Cardo Partners-style restrained link band) ============ -->
+      <section class="border-b border-primary/10 bg-white py-12">
+        <div class="container mx-auto px-4">
+          <div
+            class="grid divide-y divide-primary/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+          >
+            <a
+              href="./approach.html"
+              class="reveal group flex flex-col gap-2 px-2 py-6 transition-colors duration-300 hover:bg-light sm:px-8"
+            >
+              <span class="font-display text-lg text-primary"
+                >Our tailored approach</span
+              >
+              <span class="text-sm text-accent/80"
+                >Diagnose, design, deliver, sustain — flexible teams built
+                around your project.</span
+              >
+              <span
+                class="mt-2 text-sm font-semibold text-secondary-deep group-hover:underline"
+                >Learn about our approach →</span
+              >
+            </a>
+            <a
+              href="./services.html"
+              class="reveal reveal-1 group flex flex-col gap-2 px-2 py-6 transition-colors duration-300 hover:bg-light sm:px-8"
+            >
+              <span class="font-display text-lg text-primary"
+                >Our services</span
+              >
+              <span class="text-sm text-accent/80"
+                >Advisory, transformation, training, and facilitation, scoped to
+                a real outcome.</span
+              >
+              <span
+                class="mt-2 text-sm font-semibold text-secondary-deep group-hover:underline"
+                >Explore our services →</span
+              >
+            </a>
+            <a
+              href="./about.html"
+              class="reveal reveal-2 group flex flex-col gap-2 px-2 py-6 transition-colors duration-300 hover:bg-light sm:px-8"
+            >
+              <span class="font-display text-lg text-primary"
+                >Our trusted advisors</span
+              >
+              <span class="text-sm text-accent/80"
+                >Senior practitioners with a track record across five
+                markets.</span
+              >
+              <span
+                class="mt-2 text-sm font-semibold text-secondary-deep group-hover:underline"
+                >Meet our advisors →</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WHO WE ARE ============ -->
+      <section class="bg-white py-20 sm:py-24">
+        <div
+          class="container mx-auto grid gap-14 px-4 lg:grid-cols-2 lg:items-center lg:gap-20"
+        >
+          <div class="reveal order-2 lg:order-1">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary-deep"
+            >
+              Who We Are
+            </p>
+            <h2 class="font-display text-3xl text-primary sm:text-4xl">
+              A collective of operators, not a bench of theorists.
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-accent">
+              Sam & Co is an international consulting firm built around senior
+              practitioners who've run the functions they now advise on. We work
+              alongside leadership teams — not around them — on the strategic,
+              operational, and people challenges that decide whether a
+              transformation actually lands.
+            </p>
+            <p class="mt-4 leading-relaxed text-accent/90">
+              Our clients span government, financial services, energy,
+              healthcare, and professional services, with engagements delivered
+              on the ground across North America, the UK, and the Gulf.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <span
+                class="rounded-full bg-light px-4 py-2 text-sm font-medium text-primary"
+                >Government & Public Sector</span
+              >
+              <span
+                class="rounded-full bg-light px-4 py-2 text-sm font-medium text-primary"
+                >Financial Services</span
+              >
+              <span
+                class="rounded-full bg-light px-4 py-2 text-sm font-medium text-primary"
+                >Energy & Infrastructure</span
+              >
+              <span
+                class="rounded-full bg-light px-4 py-2 text-sm font-medium text-primary"
+                >Healthcare</span
+              >
+            </div>
+            <p
+              class="font-display mt-10 border-l-2 border-secondary pl-5 text-xl text-primary/90"
+            >
+              "Trust. Execution. Tailored solutions."
+            </p>
+          </div>
+          <div class="reveal reveal-2 order-1 lg:order-2">
+            <!--
+              PLACEHOLDER ASSET — WHO WE ARE
+              Spec: large premium image, subtle motion effect (hover-scale added below).
+              RECOMMENDED FINAL SPEC: 1600x1200 (4:3), .jpg/.webp, under 300KB.
+            -->
+            <div class="overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&auto=format&fit=crop"
+                alt="Sam & Co consultants in a strategy session"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105 sm:aspect-[5/4]"
+                width="1600"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES & SOLUTIONS ============ -->
+      <section class="bg-light py-20 sm:py-24">
+        <div class="container mx-auto px-4">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary-deep"
+            >
+              Services & Solutions
+            </p>
+            <h2 class="font-display text-3xl text-primary sm:text-4xl">
+              Four ways we work with you
+            </h2>
+            <p class="mt-4 text-accent">
+              Every engagement is scoped around a real business outcome — from a
+              single facilitated session to a multi-year transformation program.
+            </p>
+          </div>
+
+          <!--
+            PLACEHOLDER ASSETS — SERVICE CARDS (4 images)
+            Conxora Home 5-style image-forward cards. RECOMMENDED: 900x1100 (portrait),
+            .jpg/.webp, under 200KB each.
+          -->
+          <div class="mt-14 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
+            <a
+              href="./services.html"
+              class="reveal reveal-1 group relative block overflow-hidden rounded-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop"
+                alt="Advisory session with an executive team"
+                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-6">
+                <h3 class="font-display text-xl text-white">Advisory</h3>
+                <p
+                  class="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-white/85 opacity-0 transition-all duration-500 group-hover:mt-2 group-hover:max-h-24 group-hover:opacity-100"
+                >
+                  Direct counsel to executive teams and boards on strategy,
+                  structure, and high-stakes decisions.
+                </p>
+                <span
+                  class="mt-3 inline-flex items-center text-sm font-semibold text-white"
+                  >Learn more
+                  <span
+                    aria-hidden="true"
+                    class="ml-1 transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></span
+                >
+              </div>
+            </a>
+
+            <a
+              href="./services.html"
+              class="reveal reveal-2 group relative block overflow-hidden rounded-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop"
+                alt="Team working through a transformation plan"
+                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-6">
+                <h3 class="font-display text-xl text-white">Transformation</h3>
+                <p
+                  class="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-white/85 opacity-0 transition-all duration-500 group-hover:mt-2 group-hover:max-h-24 group-hover:opacity-100"
+                >
+                  Hands-on delivery support that carries a change program from
+                  design through to adoption.
+                </p>
+                <span
+                  class="mt-3 inline-flex items-center text-sm font-semibold text-white"
+                  >Learn more
+                  <span
+                    aria-hidden="true"
+                    class="ml-1 transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></span
+                >
+              </div>
+            </a>
+
+            <a
+              href="./services.html"
+              class="reveal reveal-3 group relative block overflow-hidden rounded-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=900&auto=format&fit=crop"
+                alt="Leadership training workshop"
+                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-6">
+                <h3 class="font-display text-xl text-white">Training</h3>
+                <p
+                  class="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-white/85 opacity-0 transition-all duration-500 group-hover:mt-2 group-hover:max-h-24 group-hover:opacity-100"
+                >
+                  Practical leadership and capability-building programs designed
+                  around your team's real work.
+                </p>
+                <span
+                  class="mt-3 inline-flex items-center text-sm font-semibold text-white"
+                  >Learn more
+                  <span
+                    aria-hidden="true"
+                    class="ml-1 transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></span
+                >
+              </div>
+            </a>
+
+            <a
+              href="./services.html"
+              class="reveal reveal-4 group relative block overflow-hidden rounded-xl"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?q=80&w=900&auto=format&fit=crop"
+                alt="Facilitated executive planning session"
+                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"
+              ></div>
+              <div class="absolute inset-x-0 bottom-0 p-6">
+                <h3 class="font-display text-xl text-white">Facilitation</h3>
+                <p
+                  class="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-white/85 opacity-0 transition-all duration-500 group-hover:mt-2 group-hover:max-h-24 group-hover:opacity-100"
+                >
+                  Structured working sessions that turn executive offsites and
+                  planning cycles into decisions.
+                </p>
+                <span
+                  class="mt-3 inline-flex items-center text-sm font-semibold text-white"
+                  >Learn more
+                  <span
+                    aria-hidden="true"
+                    class="ml-1 transition-transform group-hover:translate-x-1"
+                    >→</span
+                  ></span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WHY SAM & CO ============ -->
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-4">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary-deep"
+            >
+              Why Sam & Co
+            </p>
+            <h2 class="font-display text-3xl text-primary sm:text-4xl">
+              What clients ask us back for
+            </h2>
+          </div>
+
+          <div
+            class="reveal reveal-1 mt-12 grid grid-cols-2 gap-8 border-y border-primary/10 py-10 text-center sm:grid-cols-4"
+          >
+            <div>
+              <p class="font-display text-4xl text-primary">
+                <span class="counter" data-target="5">0</span>
+              </p>
+              <p class="mt-1 text-sm text-accent/70">Markets served</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl text-primary">
+                <span class="counter" data-target="20">0</span>+
+              </p>
+              <p class="mt-1 text-sm text-accent/70">
+                Years combined leadership experience
+              </p>
+            </div>
+            <div>
+              <p class="font-display text-4xl text-primary">
+                <span class="counter" data-target="4">0</span>
+              </p>
+              <p class="mt-1 text-sm text-accent/70">Core service lines</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl text-primary">
+                <span class="counter" data-target="100">0</span>%
+              </p>
+              <p class="mt-1 text-sm text-accent/70">Partner-led delivery</p>
+            </div>
+          </div>
+
+          <!--
+            PLACEHOLDER ASSETS — WHY SAM & CO (3 images)
+            Spec: large visual blocks, strong imagery, Canadian/international business settings.
+            RECOMMENDED FINAL SPEC (each): 1200x750 (16:10), .jpg/.webp, under 250KB.
+          -->
+          <div class="mt-14 grid gap-8 sm:mt-16 lg:grid-cols-3 lg:gap-10">
+            <div class="reveal reveal-1 overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
+                alt="Executive team in a working session"
+                class="aspect-[16/10] w-full object-cover"
+                width="1200"
+                height="750"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="bg-primary p-7">
+                <h3 class="font-display text-xl text-white">
+                  Execution over slideware
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/85">
+                  We stay through implementation. Recommendations are built to
+                  survive contact with your organization, not just a board
+                  meeting.
+                </p>
+              </div>
+            </div>
+
+            <div class="reveal reveal-2 overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+                alt="International business district"
+                class="aspect-[16/10] w-full object-cover"
+                width="1200"
+                height="750"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="bg-primary p-7">
+                <h3 class="font-display text-xl text-white">
+                  Genuine cross-border experience
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/85">
+                  Our advisors have led mandates across North America, the UK,
+                  and the Gulf — with the regulatory and cultural fluency each
+                  market demands.
+                </p>
+              </div>
+            </div>
+
+            <div class="reveal reveal-3 overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+                alt="Consultants reviewing strategy documents"
+                class="aspect-[16/10] w-full object-cover"
+                width="1200"
+                height="750"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="bg-primary p-7">
+                <h3 class="font-display text-xl text-white">
+                  Senior people, every engagement
+                </h3>
+                <p class="mt-3 text-sm leading-relaxed text-white/85">
+                  No hand-off to junior teams. The partner you meet in scoping
+                  is the partner in the room for delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GLOBAL REACH ============ -->
+      <section class="bg-primary py-20 sm:py-24">
+        <div class="container mx-auto px-4">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary"
+            >
+              Global Reach
+            </p>
+            <h2 class="font-display text-3xl text-white sm:text-4xl">
+              Five markets, one standard of delivery
+            </h2>
+            <p class="mt-4 text-white/80">
+              From our Toronto base, our advisors work directly in each of these
+              markets — not remotely, in them.
+            </p>
+          </div>
+
+          <div class="pin-group reveal reveal-2 mt-14 sm:mt-16">
+            <!-- Route line + dots. The line lives in an SVG that's intentionally stretched to
+                 span the full width (fine for a line) — but the dots are separate fixed-size
+                 HTML circles positioned by left/top percentage, so they can NEVER be distorted
+                 into ellipses the way SVG circles were when the SVG itself got stretched.
+                 x = 10/30/50/70/90% matches the 5 equal-width grid columns below exactly. -->
+            <div class="relative mx-auto hidden h-32 w-full max-w-4xl sm:block">
+              <svg
+                viewBox="0 0 100 32"
+                preserveAspectRatio="none"
+                class="absolute inset-0 h-full w-full"
+                role="img"
+                aria-label="Route connecting Canada, USA, UK, Saudi Arabia, and UAE"
+              >
+                <path
+                  d="M 10 24 Q 20 10 30 8 Q 40 6 50 18 Q 60 30 70 28 Q 80 20 90 10"
+                  fill="none"
+                  stroke="#FD6E3C"
+                  stroke-width="1.5"
+                  stroke-opacity="0.6"
+                  class="route-dash"
+                  vector-effect="non-scaling-stroke"
+                />
+              </svg>
+
+              <span
+                class="pin absolute"
+                style="left: 10%; top: 75%; margin-left: -6px; margin-top: -6px"
+              >
+                <span class="block h-3 w-3 rounded-full bg-secondary"></span>
+                <span
+                  class="absolute inset-0 -m-1.5 rounded-full border border-secondary/40"
+                ></span>
+              </span>
+              <span
+                class="pin absolute"
+                style="left: 30%; top: 25%; margin-left: -6px; margin-top: -6px"
+              >
+                <span class="block h-3 w-3 rounded-full bg-secondary"></span>
+                <span
+                  class="absolute inset-0 -m-1.5 rounded-full border border-secondary/40"
+                ></span>
+              </span>
+              <span
+                class="pin absolute"
+                style="
+                  left: 50%;
+                  top: 56.25%;
+                  margin-left: -6px;
+                  margin-top: -6px;
+                "
+              >
+                <span class="block h-3 w-3 rounded-full bg-secondary"></span>
+                <span
+                  class="absolute inset-0 -m-1.5 rounded-full border border-secondary/40"
+                ></span>
+              </span>
+              <span
+                class="pin absolute"
+                style="
+                  left: 70%;
+                  top: 87.5%;
+                  margin-left: -6px;
+                  margin-top: -6px;
+                "
+              >
+                <span class="block h-3 w-3 rounded-full bg-secondary"></span>
+                <span
+                  class="absolute inset-0 -m-1.5 rounded-full border border-secondary/40"
+                ></span>
+              </span>
+              <span
+                class="pin absolute"
+                style="
+                  left: 90%;
+                  top: 31.25%;
+                  margin-left: -6px;
+                  margin-top: -6px;
+                "
+              >
+                <span class="block h-3 w-3 rounded-full bg-secondary"></span>
+                <span
+                  class="absolute inset-0 -m-1.5 rounded-full border border-secondary/40"
+                ></span>
+              </span>
+            </div>
+
+            <!-- Desktop/tablet: 5-column grid, centers exactly at 10/30/50/70/90% — matches the dots above -->
+            <div
+              class="mt-6 hidden text-center sm:grid sm:grid-cols-5 sm:gap-y-6"
+            >
+              <div>
+                <p class="font-display text-lg text-white">Canada</p>
+                <p class="text-xs uppercase tracking-wide text-white/70">
+                  Home base — Toronto
+                </p>
+              </div>
+              <div>
+                <p class="font-display text-lg text-white">United States</p>
+                <p class="text-xs uppercase tracking-wide text-white/70">
+                  Advisory & training
+                </p>
+              </div>
+              <div>
+                <p class="font-display text-lg text-white">United Kingdom</p>
+                <p class="text-xs uppercase tracking-wide text-white/70">
+                  Advisory & transformation
+                </p>
+              </div>
+              <div>
+                <p class="font-display text-lg text-white">Saudi Arabia</p>
+                <p class="text-xs uppercase tracking-wide text-white/70">
+                  Transformation programs
+                </p>
+              </div>
+              <div>
+                <p class="font-display text-lg text-white">
+                  United Arab Emirates
+                </p>
+                <p class="text-xs uppercase tracking-wide text-white/70">
+                  Advisory & facilitation
+                </p>
+              </div>
+            </div>
+
+            <!-- Mobile: clean stacked list instead of forcing the same diagram into 2 columns -->
+            <ul class="flex flex-col divide-y divide-white/10 sm:hidden">
+              <li class="flex items-center gap-3 py-4">
+                <span
+                  class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
+                ></span
+                ><span
+                  ><span class="font-display block text-base text-white"
+                    >Canada</span
+                  ><span class="text-xs uppercase tracking-wide text-white/70"
+                    >Home base — Toronto</span
+                  ></span
+                >
+              </li>
+              <li class="flex items-center gap-3 py-4">
+                <span
+                  class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
+                ></span
+                ><span
+                  ><span class="font-display block text-base text-white"
+                    >United States</span
+                  ><span class="text-xs uppercase tracking-wide text-white/70"
+                    >Advisory & training</span
+                  ></span
+                >
+              </li>
+              <li class="flex items-center gap-3 py-4">
+                <span
+                  class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
+                ></span
+                ><span
+                  ><span class="font-display block text-base text-white"
+                    >United Kingdom</span
+                  ><span class="text-xs uppercase tracking-wide text-white/70"
+                    >Advisory & transformation</span
+                  ></span
+                >
+              </li>
+              <li class="flex items-center gap-3 py-4">
+                <span
+                  class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
+                ></span
+                ><span
+                  ><span class="font-display block text-base text-white"
+                    >Saudi Arabia</span
+                  ><span class="text-xs uppercase tracking-wide text-white/70"
+                    >Transformation programs</span
+                  ></span
+                >
+              </li>
+              <li class="flex items-center gap-3 py-4">
+                <span
+                  class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
+                ></span
+                ><span
+                  ><span class="font-display block text-base text-white"
+                    >United Arab Emirates</span
+                  ><span class="text-xs uppercase tracking-wide text-white/70"
+                    >Advisory & facilitation</span
+                  ></span
+                >
+              </li>
+            </ul>
+
+            <!-- Optional per spec: client/partner reference line. Placeholder copy — replace with real client sectors once approved. -->
+            <p class="reveal reveal-3 mt-10 text-center text-sm text-white/60">
+              Trusted by government, financial services, energy, and healthcare
+              organizations across all five markets.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONSULTATION CTA ============ -->
+      <!--
+        PLACEHOLDER ASSET — CTA BACKGROUND
+        Spec allows either a premium background image OR video here (calm, confident close).
+        Current placeholder: Unsplash image below.
+        RECOMMENDED FINAL SPEC (image): 2400x1350 (16:9), .jpg/.webp, under 400KB.
+        RECOMMENDED FINAL SPEC (video, if chosen instead): 1920x1080, muted loop, under 6MB.
+        Spec's "Content / Assets Needed" for this section: booking link, email, LinkedIn,
+        contact form — the contact form itself lives on contact.html; booking link + email +
+        LinkedIn are all present directly in this banner below.
+      -->
+      <section class="relative overflow-hidden py-24 sm:py-28">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop"
+            alt="Consulting team collaborating"
+            class="h-full w-full object-cover"
+            width="2400"
+            height="1350"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-dark/75"></div>
+        </div>
+        <div class="reveal container relative z-10 mx-auto px-4 text-center">
+          <h2
+            class="font-display mx-auto max-w-2xl text-3xl text-white sm:text-4xl"
+          >
+            Ready to talk through what's next for your organization?
+          </h2>
+          <p class="mx-auto mt-5 max-w-xl text-white/80">
+            A first conversation is free of charge and free of a pitch deck.
+            Tell us what you're solving for.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="./contact.html"
+              class="rounded-md bg-secondary-deep px-8 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+              >Book a Consultation</a
+            >
+            <a
+              href="mailto:info@samandco.ca"
+              class="rounded-md border border-white/50 px-8 py-3.5 font-semibold text-white transition-colors duration-300 hover:border-white hover:bg-white/10"
+              >info@samandco.ca</a
+            >
+            <a
+              href="https://www.linkedin.com/company/sam-co-ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sam & Co on LinkedIn (opens in new tab)"
+              class="flex h-12 w-12 items-center justify-center rounded-md border border-white/50 text-white transition-colors duration-300 hover:border-white hover:bg-white/10"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (+ back-to-top + video modal) is injected here from partials/footer.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

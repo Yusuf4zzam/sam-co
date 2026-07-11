@@ -1,0 +1,155 @@
+<footer class="bg-accent py-14">
+  <div class="container mx-auto px-4">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <img
+          src="./assets/images/logo.png"
+          alt="Sam & Co"
+          class="lg:h-14 h-9 w-auto"
+          loading="lazy"
+        />
+        <p class="mt-4 text-sm leading-relaxed text-white/70">
+          151 Yonge Street, Suite 1100<br />Toronto, ON, Canada
+        </p>
+      </div>
+      <div>
+        <h4 class="font-display text-lg text-white">Company</h4>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>
+            <a class="hover:text-secondary" href="./index.html">Home</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./about.html">About</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./partners.html">Partners</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./services.html">Services</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./approach.html">Approach</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./approach.html">Insights</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./contact.html">Contact</a>
+          </li>
+          <li>
+            <a class="hover:text-secondary" href="./careers.html">Careers</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-lg text-white">Contact</h4>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>
+            <a href="tel:+16473607622" class="hover:text-secondary"
+              >+1 (647) 360-7622</a
+            >
+          </li>
+          <li>
+            <a href="mailto:info@samandco.ca" class="hover:text-secondary"
+              >info@samandco.ca</a
+            >
+          </li>
+          <li>
+            <a href="./contact.html" class="hover:text-secondary"
+              >Book a Consultation</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-lg text-white">Follow</h4>
+        <ul class="mt-4 space-y-2 text-sm text-white/70">
+          <li>
+            <a
+              href="https://www.linkedin.com/company/sam-co-ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-secondary"
+              >LinkedIn <span class="sr-only">(opens in new tab)</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/samandco.consulting.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-secondary"
+              >Instagram <span class="sr-only">(opens in new tab)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/50"
+    >
+      © 2026 Sam & Co. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button
+  id="back-to-top"
+  type="button"
+  aria-label="Back to top"
+  class="fixed bottom-6 right-6 z-40 flex h-12 w-12 translate-y-4 items-center justify-center rounded-full bg-secondary-deep text-white opacity-0 shadow-lg pointer-events-none hover:bg-primary"
+>
+  <svg
+    class="h-5 w-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<!-- Video lightbox (opened by "Watch Our Story") -->
+<div
+  id="video-modal"
+  class="fixed inset-0 z-[90] hidden items-center justify-center bg-dark/80 p-4"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Sam & Co video"
+>
+  <div class="relative w-full max-w-3xl">
+    <button
+      id="video-modal-close"
+      type="button"
+      aria-label="Close video"
+      class="absolute -top-11 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+    >
+      <svg
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.8"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+    <!-- Same placeholder file as the hero; swap both together once real footage is supplied -->
+    <video
+      id="modal-video"
+      class="w-full rounded-lg"
+      controls
+      playsinline
+      poster="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=2400&auto=format&fit=crop"
+    >
+      <source src="./assets/videos/hero-reel.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
