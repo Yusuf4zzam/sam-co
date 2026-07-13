@@ -180,32 +180,85 @@
   // ---------------------------------------------------------------------
   // Video lightbox ("Watch Our Story") — one trigger button per hero slide
   // ---------------------------------------------------------------------
+  // ---------------------------------------------------------------------
+  // Video lightbox ("Watch Our Story") — one trigger button per hero slide
+  // WITH SMOOTH ANIMATIONS
+  // ---------------------------------------------------------------------
   function initVideoModal() {
     var openBtns = document.querySelectorAll(".watch-video-btn");
     var closeBtn = document.getElementById("video-modal-close");
     var modal = document.getElementById("video-modal");
     var video = document.getElementById("modal-video");
-    if (!openBtns.length || !closeBtn || !modal || !video) return;
+    var modalContent = modal ? modal.querySelector(".relative") : null;
+
+    if (!openBtns.length || !closeBtn || !modal || !video || !modalContent)
+      return;
 
     function open() {
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-      video.play().catch(function () {});
+      // Remove pointer-events and opacity classes for smooth entrance
+      modal.classList.remove("pointer-events-none");
+
+      // Use requestAnimationFrame for smooth transition
+      requestAnimationFrame(function () {
+        modal.classList.remove("opacity-0");
+        modal.classList.add("opacity-100");
+        modal.classList.remove("bg-dark/0");
+        modal.classList.add("bg-dark/80");
+      });
+
+      // Scale up the content smoothly with slight delay for coordinated animation
+      requestAnimationFrame(function () {
+        setTimeout(function () {
+          modalContent.classList.remove("scale-95", "opacity-0");
+          modalContent.classList.add("scale-100", "opacity-100");
+        }, 50);
+      });
+
+      document.body.style.overflow = "hidden";
+
+      // Auto-play with slight delay for smoothness
+      setTimeout(function () {
+        video.play().catch(function () {});
+      }, 400);
     }
+
     function close() {
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
+      // Scale down and fade out content
+      modalContent.classList.remove("scale-100", "opacity-100");
+      modalContent.classList.add("scale-95", "opacity-0");
+
+      // Fade out backdrop
+      modal.classList.remove("opacity-100", "bg-dark/80");
+      modal.classList.add("opacity-0", "bg-dark/0");
+
+      // Pause video
       video.pause();
+      video.currentTime = 0;
+
+      // Restore pointer events after animation completes
+      setTimeout(function () {
+        modal.classList.add("pointer-events-none");
+        document.body.style.overflow = "";
+      }, 500);
     }
+
     openBtns.forEach(function (btn) {
       btn.addEventListener("click", open);
     });
+
     closeBtn.addEventListener("click", close);
+
     modal.addEventListener("click", function (e) {
       if (e.target === modal) close();
     });
+
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !modal.classList.contains("hidden")) close();
+      if (
+        e.key === "Escape" &&
+        !modal.classList.contains("pointer-events-none")
+      ) {
+        close();
+      }
     });
   }
 
@@ -367,6 +420,152 @@
   }
 
   // ---------------------------------------------------------------------
+  // FAQ accordion (Conxora Home 5-style) — no-ops on pages without .faq-item
+  // ---------------------------------------------------------------------
+  function initFAQAccordion() {
+    var items = document.querySelectorAll(".faq-item");
+    if (!items.length) return;
+
+    items.forEach(function (item) {
+      var trigger = item.querySelector(".faq-trigger");
+      var panel = item.querySelector(".faq-panel");
+      var icon = item.querySelector(".faq-icon");
+      if (!trigger || !panel) return;
+
+      trigger.addEventListener("click", function () {
+        var isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+        // Close any other open item (single-open accordion, calmer than several at once)
+        items.forEach(function (other) {
+          if (other === item) return;
+          var otherTrigger = other.querySelector(".faq-trigger");
+          var otherPanel = other.querySelector(".faq-panel");
+          var otherIcon = other.querySelector(".faq-icon");
+          if (otherTrigger) otherTrigger.setAttribute("aria-expanded", "false");
+          if (otherPanel) otherPanel.style.maxHeight = "0px";
+          if (otherIcon) otherIcon.style.transform = "rotate(0deg)";
+        });
+
+        trigger.setAttribute("aria-expanded", String(!isOpen));
+        panel.style.maxHeight = isOpen ? "0px" : panel.scrollHeight + "px";
+        if (icon)
+          icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      });
+    });
+  }
+
+  // ---------------------------------------------------------------------
+  // Skill progress bars (Conxora "Our Experience" pattern) — animate width
+  // once when scrolled into view, no-ops on pages without .skill-bar-fill
+  // ---------------------------------------------------------------------
+  function initSkillBars() {
+    var bars = document.querySelectorAll(".skill-bar-fill");
+    if (!bars.length) return;
+
+    function fill(el) {
+      var target = el.getAttribute("data-percent") || "0";
+      requestAnimationFrame(function () {
+        el.style.width = target + "%";
+      });
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      bars.forEach(fill);
+    } else {
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              fill(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      bars.forEach(function (el) {
+        io.observe(el);
+      });
+    }
+  }
+
+  // ---------------------------------------------------------------------
+  // Numbered interactive service list (Conxora "Services We Offer" pattern)
+  // Clicking a numbered row swaps the active description + image. No-ops
+  // on pages without .service-tab.
+  // ---------------------------------------------------------------------
+  function initServiceTabs() {
+    var tabs = document.querySelectorAll(".service-tab");
+    if (!tabs.length) return;
+    var panels = document.querySelectorAll(".service-tab-panel");
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var target = tab.getAttribute("data-tab-target");
+        tabs.forEach(function (t) {
+          t.classList.remove("is-active");
+        });
+        panels.forEach(function (p) {
+          p.classList.remove("is-active");
+        });
+        tab.classList.add("is-active");
+        var panel = document.querySelector(
+          '.service-tab-panel[data-tab="' + target + '"]',
+        );
+        if (panel) panel.classList.add("is-active");
+      });
+    });
+  }
+
+  // ---------------------------------------------------------------------
+  // Testimonial carousel — Swiper.js instance (no-ops if a page has no
+  // .testimonial-swiper, or if Swiper itself isn't loaded on that page)
+  // ---------------------------------------------------------------------
+  function initTestimonialSwiper() {
+    var el = document.querySelector(".testimonial-swiper");
+    if (!el || typeof Swiper === "undefined") return;
+
+    new Swiper(".testimonial-swiper", {
+      loop: true,
+      speed: 700,
+      slidesPerView: 1,
+      spaceBetween: 24,
+      autoplay: prefersReducedMotion
+        ? false
+        : { delay: 5500, disableOnInteraction: false, pauseOnMouseEnter: true },
+      navigation: { nextEl: ".testimonial-next", prevEl: ".testimonial-prev" },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  }
+
+  // ---------------------------------------------------------------------
+  // Inline "Let's Get Started" inquiry form — no backend wired up yet.
+  // Shows an inline confirmation on submit rather than actually sending
+  // anywhere. Wire to a real endpoint (or the dedicated Contact page's
+  // handler) before launch. No-ops on pages without .cta-inquiry-form.
+  // ---------------------------------------------------------------------
+  function initContactForm() {
+    var forms = document.querySelectorAll(".cta-inquiry-form");
+    if (!forms.length) return;
+
+    forms.forEach(function (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var success = form.querySelector(".cta-inquiry-success");
+        var button = form.querySelector('button[type="submit"]');
+        if (success) success.classList.remove("hidden");
+        if (button) {
+          button.disabled = true;
+          button.textContent = "Message Sent";
+        }
+      });
+    });
+  }
+
+  // ---------------------------------------------------------------------
   // Boot sequence
   // ---------------------------------------------------------------------
   document.addEventListener("DOMContentLoaded", function () {
@@ -375,7 +574,12 @@
     // These only touch each page's own <main> content, already in the initial
     // HTML — no need to wait on the header/footer includes.
     initHeroSwiper();
+    initTestimonialSwiper();
     initCounters();
+    initSkillBars();
+    initServiceTabs();
+    initFAQAccordion();
+    initContactForm();
 
     var windowLoaded = new Promise(function (resolve) {
       if (document.readyState === "complete") resolve();
@@ -396,3 +600,113 @@
     setTimeout(hidePreloader, 2500); // hard fallback
   });
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lenis = new Lenis({
+    duration: 2,
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 2,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("video-modal");
+  const modalVideo = document.getElementById("modal-video");
+  const closeBtn = document.getElementById("video-modal-close");
+  const playBtns = document.querySelectorAll(".video-play-btn");
+  const modalContent = modal.querySelector(".relative");
+
+  function openModal(videoSrc, posterSrc) {
+    // Set video sources
+    modalVideo.querySelector("source").src = videoSrc;
+    modalVideo.poster = posterSrc || "";
+    modalVideo.load();
+
+    // Remove pointer-events and opacity classes for smooth entrance
+    modal.classList.remove("pointer-events-none");
+
+    // Use requestAnimationFrame for smooth transition
+    requestAnimationFrame(() => {
+      modal.classList.remove("opacity-0");
+      modal.classList.add("opacity-100");
+      modal.classList.remove("bg-dark/0");
+      modal.classList.add("bg-dark/80");
+    });
+
+    // Scale up the content smoothly
+    requestAnimationFrame(() => {
+      modalContent.classList.remove("scale-95");
+      modalContent.classList.add("scale-100");
+    });
+
+    document.body.style.overflow = "hidden";
+
+    // Auto-play with slight delay for smoothness
+    setTimeout(() => {
+      modalVideo.play().catch(() => {});
+    }, 300);
+  }
+
+  function closeModal() {
+    // Scale down
+    modalContent.classList.remove("scale-100");
+    modalContent.classList.add("scale-95");
+
+    // Fade out
+    modal.classList.remove("opacity-100");
+    modal.classList.add("opacity-0");
+    modal.classList.remove("bg-dark/80");
+    modal.classList.add("bg-dark/0");
+
+    // Pause video
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+
+    // Restore pointer events after animation completes
+    setTimeout(() => {
+      modal.classList.add("pointer-events-none");
+      document.body.style.overflow = "";
+    }, 500);
+  }
+
+  // Open modal on video button click
+  playBtns.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const videoSrc = this.dataset.videoSrc;
+      const posterSrc = this.dataset.videoPoster;
+      if (videoSrc) {
+        openModal(videoSrc, posterSrc);
+      }
+    });
+  });
+
+  // Close modal
+  closeBtn.addEventListener("click", closeModal);
+
+  // Close on backdrop click
+  modal.addEventListener("click", function (e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.key === "Escape" &&
+      !modal.classList.contains("pointer-events-none")
+    ) {
+      closeModal();
+    }
+  });
+});

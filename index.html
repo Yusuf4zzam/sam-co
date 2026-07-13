@@ -98,11 +98,8 @@
       fetchpriority="high"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <script src="./js/tw.js"></script>
+    <link rel="stylesheet" href="./css/swiper.css" />
 
     <style type="text/tailwindcss">
       @theme {
@@ -141,6 +138,67 @@
       </div>
     </div>
 
+    <div class="bg-light">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-3 lg:py-4 flex-wrap gap-6"
+      >
+        <div class="sm:text-sm text-xs text-primary/80 flex items-center gap-4">
+          <a
+            href="mailto:info@samandco.ca"
+            class="hover:text-secondary border-r border-primary/80 pr-4 transition-colors duration-300 font-medium"
+            >info@samandco.ca</a
+          >
+          <a
+            href="tel:+1-647-360-7622"
+            class="hover:text-secondary transition-colors duration-300 font-medium"
+            >+1 (647) 360-7622</a
+          >
+        </div>
+
+        <div class="flex items-center gap-4">
+          <!-- LinkedIn icon -->
+          <a
+            href="https://www.linkedin.com/company/sam-co-ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sam & Co on LinkedIn"
+            class="flex h-5 w-5 items-center justify-center text-primary transition-colors duration-300 hover:text-secondary"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+              />
+            </svg>
+          </a>
+
+          <!-- Instagram icon -->
+          <a
+            href="https://www.instagram.com/samandco/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sam & Co on Instagram"
+            class="flex h-5 w-5 items-center justify-center text-primary transition-colors duration-300 hover:text-secondary"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Header is injected here from partials/header.html by js/main.js -->
     <header class="site-header sticky top-0 z-50 bg-primary py-4">
       <div class="container mx-auto flex items-center justify-between px-4">
@@ -162,7 +220,7 @@
           <ul class="flex space-x-6">
             <li>
               <a
-                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm active"
                 href="./index.html"
                 >Home</a
               >
@@ -198,17 +256,11 @@
             <li>
               <a
                 class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
-                href="./approach.html"
+                href="./insights.html"
                 >Insights</a
               >
             </li>
-            <li>
-              <a
-                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
-                href="./contact.html"
-                >Contact</a
-              >
-            </li>
+
             <li>
               <a
                 class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
@@ -287,7 +339,7 @@
         <ul class="flex flex-col space-y-1">
           <li class="drawer-link drawer-link-1">
             <a
-              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10 active"
               href="./index.html"
               >Home</a
             >
@@ -316,7 +368,7 @@
           <li class="drawer-link drawer-link-2">
             <a
               class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
-              href="./approach.html"
+              href="./insights.html"
               >Approach</a
             >
           </li>
@@ -327,13 +379,7 @@
               >Insights</a
             >
           </li>
-          <li class="drawer-link drawer-link-4">
-            <a
-              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
-              href="./contact.html"
-              >Contact</a
-            >
-          </li>
+
           <li class="drawer-link drawer-link-2">
             <a
               class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
@@ -380,8 +426,8 @@
     </script>
 
     <main id="main-content">
-      <section class="hero-slider relativew-full overflow-hidden">
-        <div class="swiper hero-swiper h-full w-full">
+      <section class="hero-slider relative w-full overflow-hidden">
+        <div class="swiper hero-swiper h-full w-full py-6">
           <div class="swiper-wrapper">
             <!-- Slide 1: headline + subhead + consultation CTA + video asset (Toronto skyline) -->
             <div
@@ -411,11 +457,13 @@
                   >
                     Advisory · Transformation · Training
                   </p>
-                  <h1 class="hero-headline font-display max-w-3xl text-white">
+                  <h1
+                    class="hero-headline font-display max-w-3xl text-white xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl"
+                  >
                     Executive consulting, built for how organizations actually
                     change.
                   </h1>
-                  <p class="mt-6 max-w-xl text-base text-light sm:text-lg">
+                  <p class="mt-6 max-w-xl text-sm text-light sm:text-lg">
                     Sam & Co partners with leaders across Canada, the US, the
                     UK, Saudi Arabia, and the UAE to diagnose what's holding
                     growth back — and deliver the plan to fix it.
@@ -423,16 +471,16 @@
                   <div class="mt-9 flex flex-wrap items-center gap-5">
                     <a
                       href="./contact.html"
-                      class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+                      class="rounded-md bg-secondary-deep sm:text-lg text-sm px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
                       >Book a Consultation</a
                     >
                     <button
                       type="button"
-                      class="watch-video-btn group flex items-center gap-3 text-white cursor-pointer"
+                      class="watch-video-btn group flex items-center gap-3 text-white cursor-pointer cursor-pointer"
                       aria-haspopup="dialog"
                     >
                       <span
-                        class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-colors duration-300 group-hover:bg-white group-hover:text-primary"
+                        class="flex sm:h-12 h-8 w-8 sm:w-12 items-center justify-center rounded-full bg-white/15 backdrop-blur transition-colors duration-300 group-hover:bg-white group-hover:text-primary"
                       >
                         <svg
                           class="ml-0.5 h-4 w-4"
@@ -443,7 +491,9 @@
                           <path d="M8 5v14l11-7z" />
                         </svg>
                       </span>
-                      <span class="font-semibold">Watch Our Story</span>
+                      <span class="font-semibold sm:text-lg text-sm"
+                        >Watch Our Story</span
+                      >
                     </button>
                   </div>
                   <a
@@ -478,10 +528,12 @@
                   >
                     Advisory · Transformation · Training
                   </p>
-                  <h1 class="hero-headline font-display max-w-3xl text-white">
+                  <h1
+                    class="hero-headline font-display max-w-3xl text-white xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl"
+                  >
                     From boardroom strategy to on-the-ground delivery.
                   </h1>
-                  <p class="mt-6 max-w-xl text-base text-light sm:text-lg">
+                  <p class="mt-6 max-w-xl text-sm text-light sm:text-lg">
                     We don't hand off after the recommendation. Our advisors
                     stay through implementation, on-site, until the change
                     actually sticks.
@@ -489,12 +541,12 @@
                   <div class="mt-9 flex flex-wrap items-center gap-5">
                     <a
                       href="./contact.html"
-                      class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+                      class="rounded-md bg-secondary-deep sm:text-lg text-sm px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
                       >Book a Consultation</a
                     >
                     <button
                       type="button"
-                      class="watch-video-btn group flex items-center gap-3 text-white"
+                      class="watch-video-btn group flex items-center gap-3 text-white cursor-pointer"
                       aria-haspopup="dialog"
                     >
                       <span
@@ -544,10 +596,12 @@
                   >
                     Advisory · Transformation · Training
                   </p>
-                  <h1 class="hero-headline font-display max-w-3xl text-white">
+                  <h1
+                    class="hero-headline font-display max-w-3xl text-white xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl"
+                  >
                     One senior team. Five international markets.
                   </h1>
-                  <p class="mt-6 max-w-xl text-base text-light sm:text-lg">
+                  <p class="mt-6 max-w-xl text-sm text-light sm:text-lg">
                     Toronto-based, working directly across the US, the UK, Saudi
                     Arabia, and the UAE — with the regulatory and cultural
                     fluency each market demands.
@@ -555,12 +609,12 @@
                   <div class="mt-9 flex flex-wrap items-center gap-5">
                     <a
                       href="./contact.html"
-                      class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+                      class="rounded-md bg-secondary-deep sm:text-lg text-sm px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
                       >Book a Consultation</a
                     >
                     <button
                       type="button"
-                      class="watch-video-btn group flex items-center gap-3 text-white"
+                      class="watch-video-btn group flex items-center gap-3 text-white cursor-pointer"
                       aria-haspopup="dialog"
                     >
                       <span
@@ -595,11 +649,11 @@
           <button
             type="button"
             id="hero-prev"
-            class="hero-nav-btn cursor-pointer"
+            class="hero-nav-btn cursor-pointer sm:size-10 size-8"
             aria-label="Previous slide"
           >
             <svg
-              class="h-5 w-5"
+              class="sm:h-5 h-3 sm:w-5 w-3"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -614,18 +668,18 @@
           </button>
           <span
             id="hero-indicator"
-            class="text-center text-sm font-medium tracking-wide text-white"
+            class="text-center sm:text-sm text-xs font-medium tracking-wide text-white"
             aria-live="polite"
             >01 / 03 — Executive Advisory</span
           >
           <button
             type="button"
             id="hero-next"
-            class="hero-nav-btn cursor-pointer"
+            class="hero-nav-btn cursor-pointer sm:size-10 size-8"
             aria-label="Next slide"
           >
             <svg
-              class="h-5 w-5"
+              class="sm:h-5 h-3 sm:w-5 w-3"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -644,17 +698,19 @@
       <!-- Video lightbox (opened by "Watch Our Story") -->
       <div
         id="video-modal"
-        class="fixed inset-0 z-[90] hidden items-center justify-center bg-dark/80 p-4"
+        class="fixed inset-0 z-[90] flex items-center justify-center p-4 pointer-events-none opacity-0 bg-dark/0 transition-all duration-500 ease-out"
         role="dialog"
         aria-modal="true"
         aria-label="Sam & Co video"
       >
-        <div class="relative w-full max-w-3xl h-1/2 md:h-2/3 lg:h-3/4">
+        <div
+          class="relative w-full max-w-3xl h-1/2 md:h-2/3 lg:h-3/4 transform scale-95 opacity-0 transition-all duration-500 ease-out"
+        >
           <button
             id="video-modal-close"
             type="button"
             aria-label="Close video"
-            class="absolute -top-11 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+            class="absolute -top-11 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:scale-110 hover:bg-white/20"
           >
             <svg
               class="h-5 w-5"
@@ -670,10 +726,9 @@
               />
             </svg>
           </button>
-          <!-- Same placeholder file as the hero; swap both together once real footage is supplied -->
           <video
             id="modal-video"
-            class="w-full rounded-lg h-full object-cover shadow-lg"
+            class="w-full rounded-lg h-full object-cover shadow-2xl"
             controls
             playsinline
             poster="https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=2400&auto=format&fit=crop"
@@ -682,7 +737,6 @@
           </video>
         </div>
       </div>
-
       <!-- ============ QUICK EXPLORE (Cardo Partners-style restrained link band) ============ -->
       <section class="border-b border-primary/10 bg-white py-12">
         <div class="container mx-auto px-4">
@@ -1247,7 +1301,7 @@
 
             <!-- Mobile: clean stacked list instead of forcing the same diagram into 2 columns -->
             <ul class="flex flex-col divide-y divide-white/10 sm:hidden">
-              <li class="flex items-center gap-3 py-4">
+              <li class="flex items-baseline gap-3 py-4">
                 <span
                   class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
                 ></span
@@ -1259,7 +1313,7 @@
                   ></span
                 >
               </li>
-              <li class="flex items-center gap-3 py-4">
+              <li class="flex items-baseline gap-3 py-4">
                 <span
                   class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
                 ></span
@@ -1271,7 +1325,7 @@
                   ></span
                 >
               </li>
-              <li class="flex items-center gap-3 py-4">
+              <li class="flex items-baseline gap-3 py-4">
                 <span
                   class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
                 ></span
@@ -1283,7 +1337,7 @@
                   ></span
                 >
               </li>
-              <li class="flex items-center gap-3 py-4">
+              <li class="flex items-baseline gap-3 py-4">
                 <span
                   class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
                 ></span
@@ -1295,7 +1349,7 @@
                   ></span
                 >
               </li>
-              <li class="flex items-center gap-3 py-4">
+              <li class="flex items-baseline gap-3 py-4">
                 <span
                   class="h-2.5 w-2.5 shrink-0 rounded-full bg-secondary"
                 ></span
@@ -1319,16 +1373,6 @@
       </section>
 
       <!-- ============ CONSULTATION CTA ============ -->
-      <!--
-        PLACEHOLDER ASSET — CTA BACKGROUND
-        Spec allows either a premium background image OR video here (calm, confident close).
-        Current placeholder: Unsplash image below.
-        RECOMMENDED FINAL SPEC (image): 2400x1350 (16:9), .jpg/.webp, under 400KB.
-        RECOMMENDED FINAL SPEC (video, if chosen instead): 1920x1080, muted loop, under 6MB.
-        Spec's "Content / Assets Needed" for this section: booking link, email, LinkedIn,
-        contact form — the contact form itself lives on contact.html; booking link + email +
-        LinkedIn are all present directly in this banner below.
-      -->
       <section class="relative overflow-hidden py-24 sm:py-28">
         <div class="absolute inset-0">
           <img
@@ -1389,7 +1433,8 @@
     <!-- Footer (+ back-to-top + video modal) is injected here from partials/footer.html -->
     <div id="footer-placeholder"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/lenis.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

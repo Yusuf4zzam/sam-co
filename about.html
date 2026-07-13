@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
+    <meta
+      name="description"
+      content="Sam & Co is a collective of senior consulting practitioners with a clear story, a shared philosophy, and partners who've run the functions they now advise on. Learn who we are and why we started."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large"
+    />
+    <link rel="canonical" href="https://www.samandco.ca/about.html" />
+    <meta name="author" content="Sam & Co" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.samandco.ca/about.html" />
+    <meta
+      property="og:title"
+      content="About Sam & Co - International Consulting & Advisory Firm"
+    />
+    <meta
+      property="og:description"
+      content="A collective of senior practitioners who've run the functions they now advise on — our story, our philosophy, and the partners behind it."
+    />
+    <meta
+      property="og:image"
+      content="https://www.samandco.ca/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Sam & Co - International Consulting Firm"
+    />
+    <meta property="og:site_name" content="Sam & Co" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.samandco.ca/about.html" />
+    <meta
+      name="twitter:title"
+      content="About Sam & Co - International Consulting & Advisory Firm"
+    />
+    <meta
+      name="twitter:description"
+      content="A collective of senior practitioners who've run the functions they now advise on — our story, our philosophy, and the partners behind it."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.samandco.ca/assets/images/twitter-image.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Sam & Co - International Consulting Firm"
+    />
+    <meta name="twitter:site" content="@SamAndCo" />
+    <meta name="twitter:creator" content="@SamAndCo" />
+
+    <meta name="theme-color" content="#204163" />
+    <meta name="application-name" content="Sam & Co" />
+    <meta name="apple-mobile-web-app-title" content="Sam & Co" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <title>About | Sam & Co.</title>
+
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="assets/icons/fb4781_11cbe26873a74c13adb2aa1554076e2b~mv21.png"
+      type="image/png"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/fb4781_11cbe26873a74c13adb2aa1554076e2b~mv2.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/icons/fb4781_11cbe26873a74c13adb2aa1554076e2b~mv22.png"
+      type="image/png"
+    />
+
+    <!-- Preload the LCP hero image for faster paint -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2400&auto=format&fit=crop"
+      fetchpriority="high"
+    />
+
+    <!-- DM Serif Display (headlines) + DM Sans (body) are self-hosted —
+         see the @font-face rules at the top of css/main.css and
+         assets/fonts/README.md. Preloading the two most-used weight files
+         here speeds up first render since they're needed almost immediately. -->
+    <link
+      rel="preload"
+      href="assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
+    <!-- No Swiper on this page — the About hero is a single image per the spec
+         ("Premium full-width image or subtle video"), not a carousel, so the
+         Swiper library isn't loaded here at all (no point paying for it unused). -->
+    <script src="./js/tw.js"></script>
+
+    <!-- Tailwind v4's zero-build browser CDN only reads @theme tokens from an inline
+         <style type="text/tailwindcss"> tag it scans at runtime — it cannot read them
+         from an external stylesheet. This is the one CSS block that has to stay inline;
+         every other rule lives in css/main.css. See README.md for the build-pipeline
+         upgrade path that removes this constraint entirely. -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #204163;
+        --color-secondary: #fd6e3c;
+        --color-secondary-deep: #d6551f; /* AA-safe variant for solid CTA buttons */
+        --color-white: #ffffff;
+        --color-black: #000000;
+        --color-light: #fdf3e0;
+        --color-dark: #090909;
+        --color-accent: #292b2f;
+
+        --font-dm-serif: "DM Serif Display", serif;
+        --font-dm-sans: "DM Sans", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Preloader + skip-link render statically on every page (not fetched) so they're
+         visible on first paint, before main.js or the header/footer includes run. -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-primary"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="flex flex-col items-center gap-4">
+        <span class="font-display text-2xl text-white"
+          >Sam <span class="text-secondary">&</span> Co</span
+        >
+        <span class="preloader-bar h-0.5 w-32 rounded-full bg-white/15">
+          <span class="preloader-bar-fill"></span>
+        </span>
+        <span class="sr-only">Loading</span>
+      </div>
+    </div>
+    <div class="bg-light">
+      <div
+        class="container mx-auto flex items-center justify-between px-4 py-3 lg:py-4 flex-wrap gap-6"
+      >
+        <div class="sm:text-sm text-xs text-primary/80 flex items-center gap-4">
+          <a
+            href="mailto:info@samandco.ca"
+            class="hover:text-secondary border-r border-primary/80 pr-4 transition-colors duration-300 font-medium"
+            >info@samandco.ca</a
+          >
+          <a
+            href="tel:+1-647-360-7622"
+            class="hover:text-secondary transition-colors duration-300 font-medium"
+            >+1 (647) 360-7622</a
+          >
+        </div>
+
+        <div class="flex items-center gap-4">
+          <!-- LinkedIn icon -->
+          <a
+            href="https://www.linkedin.com/company/sam-co-ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sam & Co on LinkedIn"
+            class="flex h-5 w-5 items-center justify-center text-primary transition-colors duration-300 hover:text-secondary"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+              />
+            </svg>
+          </a>
+
+          <!-- Instagram icon -->
+          <a
+            href="https://www.instagram.com/samandco/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Sam & Co on Instagram"
+            class="flex h-5 w-5 items-center justify-center text-primary transition-colors duration-300 hover:text-secondary"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header is injected here from partials/header.html by js/main.js -->
+    <header class="site-header sticky top-0 z-50 bg-primary py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <div class="logo">
+          <a href="./index.html" aria-label="Sam & Co home">
+            <img
+              src="./assets/images/logo.png"
+              alt="Sam & Co"
+              title="Sam & Co"
+              class="lg:h-14 h-9 w-auto"
+            />
+          </a>
+        </div>
+
+        <nav
+          class="navbar-section hidden items-center space-x-6 lg:flex"
+          aria-label="Primary"
+        >
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm active"
+                href="./about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./partners.html"
+                >Partners</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./approach.html"
+                >Approach</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./insights.html"
+                >Insights</a
+              >
+            </li>
+
+            <li>
+              <a
+                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
+                href="./careers.html"
+                >Careers</a
+              >
+            </li>
+          </ul>
+          <a
+            class="rounded-md xl:text-lg text-sm bg-secondary-deep px-4 py-2 font-semibold text-white transition-colors duration-300 border border-transparent hover:bg-white hover:text-primary"
+            href="./contact.html"
+            >Book a Consultation</a
+          >
+        </nav>
+
+        <!-- Mobile menu toggle -->
+        <button
+          id="menu-toggle"
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-md text-white lg:hidden cursor-pointer"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <svg
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile drawer backdrop -->
+    <div id="mobile-menu-backdrop"></div>
+
+    <!-- Mobile drawer (slides in from the right) -->
+    <aside id="mobile-menu" aria-hidden="true">
+      <div
+        class="flex items-center justify-between border-b border-white/10 px-6 py-5"
+      >
+        <span class="font-display text-lg text-white">Menu</span>
+        <button
+          id="menu-close"
+          type="button"
+          aria-label="Close menu"
+          class="flex h-9 w-9 items-center justify-center rounded-md text-white hover:bg-white/10"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        class="flex flex-1 flex-col justify-between px-6 py-8"
+        aria-label="Mobile"
+      >
+        <ul class="flex flex-col space-y-1">
+          <li class="drawer-link drawer-link-1">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./index.html"
+              >Home</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10 active"
+              href="./about.html"
+              >About</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./partners.html"
+              >Partners</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-3">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./services.html"
+              >Services</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./insights.html"
+              >Approach</a
+            >
+          </li>
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./insights.html"
+              >Insights</a
+            >
+          </li>
+
+          <li class="drawer-link drawer-link-2">
+            <a
+              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
+              href="./careers.html"
+              >Careers</a
+            >
+          </li>
+        </ul>
+        <a
+          class="drawer-link drawer-link-5 mt-8 block rounded-md bg-secondary-deep px-4 py-3 text-center font-semibold text-white"
+          href="./contact.html"
+          >Book a Consultation</a
+        >
+      </nav>
+    </aside>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Sam & Co",
+        "description": "A collective of senior consulting practitioners with a clear story, a shared philosophy, and partners who've run the functions they now advise on.",
+        "url": "https://www.samandco.ca/about.html",
+        "isPartOf": {
+          "@type": "ProfessionalService",
+          "name": "Sam & Co",
+          "url": "https://www.samandco.ca/",
+          "telephone": "+1(647) 360-7622",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "151 Yonge Street, Suite 1100",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          }
+        }
+      }
+    </script>
+
+    <main id="main-content">
+      <!-- ============ HERO BANNER ============ -->
+      <section
+        class="relative flex h-[70svh] min-h-[440px] w-full items-center overflow-hidden"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2400&auto=format&fit=crop"
+          alt="Sam & Co partners in conversation"
+          class="absolute inset-0 h-full w-full object-cover"
+          width="2400"
+          height="1400"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-primary/75"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-primary/20"
+        ></div>
+        <div class="reveal relative z-10 w-full">
+          <div class="container mx-auto px-4">
+            <p
+              class="mb-5 inline-block rounded-full border border-white/30 px-4 py-1.5 text-sm font-medium tracking-wide text-light"
+            >
+              About Sam & Co
+            </p>
+            <h1 class="font-display max-w-2xl text-4xl text-white sm:text-5xl">
+              A collective built on trust, execution, and tailored solutions.
+            </h1>
+            <p class="mt-6 max-w-xl text-base text-light/90 sm:text-lg">
+              We're not a firm that sells a methodology off a slide. We're
+              senior practitioners who've run the functions we now advise on —
+              brought together because clients kept asking us to work together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ OUR STORY ============ -->
+      <section class="bg-white py-20 sm:py-24">
+        <div
+          class="container mx-auto grid gap-14 px-4 lg:grid-cols-2 lg:items-center lg:gap-20"
+        >
+          <div class="reveal">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary-deep"
+            >
+              Our Story
+            </p>
+            <h2 class="font-display text-3xl text-primary sm:text-4xl">
+              Why Sam & Co exists
+            </h2>
+            <p class="mt-6 text-lg leading-relaxed text-accent">
+              Sam & Co started with a simple observation: the clients who got
+              the most out of consulting weren't buying a framework — they were
+              buying a specific senior person's judgment, and then losing access
+              to that judgment the moment the engagement ended.
+            </p>
+            <p class="mt-4 leading-relaxed text-accent/90">
+              We built Sam & Co as the alternative — a collective of
+              practitioners who stay reachable, stay senior, and stay
+              accountable for outcomes rather than deliverables. What started as
+              a handful of advisors working informally together across Toronto
+              and London became a formal international practice once the pattern
+              was undeniable: clients wanted the team, not just the individual
+              project.
+            </p>
+          </div>
+          <div class="reveal reveal-2">
+            <div class="overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&auto=format&fit=crop"
+                alt="Sam & Co partners reviewing strategy together"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
+                width="1600"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MISSION & VALUES ============ -->
+      <section class="bg-light py-20 sm:py-24">
+        <div class="container mx-auto px-4">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary-deep"
+            >
+              Mission & Values
+            </p>
+            <h2 class="font-display text-3xl text-primary sm:text-4xl">
+              What we hold ourselves to
+            </h2>
+          </div>
+
+          <div
+            class="mt-14 grid gap-6 sm:mt-16 md:grid-cols-2 lg:grid-cols-3 grid-cols-1"
+          >
+            <div class="reveal reveal-1 rounded-xl bg-white p-8 shadow-sm">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10"
+              >
+                <svg
+                  class="h-6 w-6 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-display mt-5 text-xl text-primary">Mission</h3>
+              <p class="mt-3 text-sm leading-relaxed text-accent/90">
+                Give leadership teams direct access to senior judgment — not a
+                layer of process between them and the person who actually knows
+                the answer.
+              </p>
+            </div>
+
+            <div class="reveal reveal-2 rounded-xl bg-white p-8 shadow-sm">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10"
+              >
+                <svg
+                  class="h-6 w-6 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-display mt-5 text-xl text-primary">Vision</h3>
+              <p class="mt-3 text-sm leading-relaxed text-accent/90">
+                A firm that clients call back not because of a contract, but
+                because the last engagement actually changed how their
+                organization performs.
+              </p>
+            </div>
+
+            <div class="reveal reveal-3 rounded-xl bg-white p-8 shadow-sm">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10"
+              >
+                <svg
+                  class="h-6 w-6 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-display mt-5 text-xl text-primary">Values</h3>
+              <p class="mt-3 text-sm leading-relaxed text-accent/90">
+                Trust before selling. Execution before theory. Solutions
+                tailored to the client in front of us, not a repackaged deck
+                from the last one.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PARTNERS ============ -->
+      <section class="bg-white py-20 sm:py-24">
+        <div class="container mx-auto px-4">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p
+              class="mb-3 text-sm font-semibold uppercase tracking-widest text-secondary-deep"
+            >
+              Partners
+            </p>
+            <h2 class="font-display text-3xl text-primary sm:text-4xl">
+              Senior people, not a bench
+            </h2>
+            <p class="mt-4 text-accent">
+              Every partner listed here has run the function they now advise on
+              — no hand-off to a team you haven't met.
+            </p>
+          </div>
+
+          <div class="mt-14 grid gap-8 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="reveal reveal-1 group">
+              <div class="overflow-hidden rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                  alt="Portrait of a Sam & Co partner"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="font-display mt-4 text-lg text-primary">
+                Partner Name
+              </h3>
+              <p class="text-sm text-accent/70">Managing Partner, Advisory</p>
+              <p class="mt-2 text-sm leading-relaxed text-accent/90">
+                15+ years leading transformation programs across financial
+                services and government. [Placeholder bio — real copy pending
+                Partner Biography Form.]
+              </p>
+              <a
+                href="#"
+                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-secondary-deep hover:underline"
+              >
+                LinkedIn
+              </a>
+
+              <div class="flex justify-end mt-4">
+                <a
+                  href=""
+                  class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-secondary-deep hover:underline"
+                >
+                  Read More ...
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal reveal-2 group">
+              <div class="overflow-hidden rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop"
+                  alt="Portrait of a Sam & Co partner"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="font-display mt-4 text-lg text-primary">
+                Partner Name
+              </h3>
+              <p class="text-sm text-accent/70">Partner, Transformation</p>
+              <p class="mt-2 text-sm leading-relaxed text-accent/90">
+                Former COO with hands-on delivery experience across energy and
+                infrastructure. [Placeholder bio — real copy pending Partner
+                Biography Form.]
+              </p>
+              <a
+                href="#"
+                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-secondary-deep hover:underline"
+              >
+                LinkedIn
+              </a>
+
+              <div class="flex justify-end mt-4">
+                <a
+                  href=""
+                  class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-secondary-deep hover:underline"
+                >
+                  Read More ...
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal reveal-3 group">
+              <div class="overflow-hidden rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop"
+                  alt="Portrait of a Sam & Co partner"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="font-display mt-4 text-lg text-primary">
+                Partner Name
+              </h3>
+              <p class="text-sm text-accent/70">
+                Partner, Training & Facilitation
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-accent/90">
+                Designs and leads executive leadership programs across the UK
+                and Gulf markets. [Placeholder bio — real copy pending Partner
+                Biography Form.]
+              </p>
+              <a
+                href="#"
+                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-secondary-deep hover:underline"
+              >
+                LinkedIn
+              </a>
+
+              <div class="flex justify-end mt-4">
+                <a
+                  href=""
+                  class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-secondary-deep hover:underline"
+                >
+                  Read More ...
+                </a>
+              </div>
+            </div>
+
+            <div class="reveal reveal-4 group">
+              <div class="overflow-hidden rounded-xl">
+                <img
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
+                  alt="Portrait of a Sam & Co partner"
+                  class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="800"
+                  height="1000"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="font-display mt-4 text-lg text-primary">
+                Partner Name
+              </h3>
+              <p class="text-sm text-accent/70">
+                Trusted Advisor, Public Sector
+              </p>
+              <p class="mt-2 text-sm leading-relaxed text-accent/90">
+                20+ years in government advisory across Canada and the UAE.
+                [Placeholder bio — real copy pending Partner Biography Form.]
+              </p>
+              <a
+                href="#"
+                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-secondary-deep hover:underline"
+              >
+                LinkedIn
+              </a>
+
+              <div class="flex justify-end mt-4">
+                <a
+                  href=""
+                  class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:text-secondary-deep hover:underline"
+                >
+                  Read More ...
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal mt-12 text-center">
+            <a
+              href="./partners.html"
+              class="text-sm font-semibold text-primary hover:text-secondary-deep hover:underline"
+            >
+              Meet the full team on our Partners page →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONSULTATION CTA ============ -->
+      <section class="relative overflow-hidden py-24 sm:py-28">
+        <div class="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2400&auto=format&fit=crop"
+            alt="Consulting team collaborating"
+            class="h-full w-full object-cover"
+            width="2400"
+            height="1350"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-dark/75"></div>
+        </div>
+        <div class="reveal container relative z-10 mx-auto px-4 text-center">
+          <h2
+            class="font-display mx-auto max-w-2xl text-3xl text-white sm:text-4xl"
+          >
+            Ready to talk through what's next for your organization?
+          </h2>
+          <p class="mx-auto mt-5 max-w-xl text-white/80">
+            A first conversation is free of charge and free of a pitch deck.
+            Tell us what you're solving for.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="./contact.html"
+              class="rounded-md bg-secondary-deep px-8 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-primary"
+              >Book a Consultation</a
+            >
+            <a
+              href="mailto:info@samandco.ca"
+              class="rounded-md border border-white/50 px-8 py-3.5 font-semibold text-white transition-colors duration-300 hover:border-white hover:bg-white/10"
+              >info@samandco.ca</a
+            >
+            <a
+              href="https://www.linkedin.com/company/sam-co-ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sam & Co on LinkedIn (opens in new tab)"
+              class="flex h-12 w-12 items-center justify-center rounded-md border border-white/50 text-white transition-colors duration-300 hover:border-white hover:bg-white/10"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (+ back-to-top + video modal) is injected here from partials/footer.html -->
+    <div id="footer-placeholder"></div>
+
+    <script src="./js/lenis.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
