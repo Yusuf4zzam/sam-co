@@ -290,6 +290,15 @@ h3,
 .drawer-link-5 {
   transition-delay: 0.32s;
 }
+.drawer-link-6 {
+  transition-delay: 0.38s;
+}
+.drawer-link-7 {
+  transition-delay: 0.44s;
+}
+.drawer-link-8 {
+  transition-delay: 0.5s;
+}
 
 /* Hero — Swiper.js instance */
 .hero-swiper,
