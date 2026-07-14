@@ -179,9 +179,6 @@
 
   // ---------------------------------------------------------------------
   // Video lightbox ("Watch Our Story") — one trigger button per hero slide
-  // ---------------------------------------------------------------------
-  // ---------------------------------------------------------------------
-  // Video lightbox ("Watch Our Story") — one trigger button per hero slide
   // WITH SMOOTH ANIMATIONS
   // ---------------------------------------------------------------------
   function initVideoModal() {
@@ -623,7 +620,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalVideo = document.getElementById("modal-video");
   const closeBtn = document.getElementById("video-modal-close");
   const playBtns = document.querySelectorAll(".video-play-btn");
-  const modalContent = modal.querySelector(".relative");
+
+  // FIX: Check if modal exists before querySelector
+  const modalContent = modal ? modal.querySelector(".relative") : null;
+
+  // Exit early if any required element is missing
+  if (!modal || !modalVideo || !closeBtn || !playBtns.length || !modalContent) {
+    console.warn("Video modal elements not found on this page");
+    return;
+  }
 
   function openModal(videoSrc, posterSrc) {
     // Set video sources
