@@ -142,11 +142,21 @@
 
     function setOpen(open) {
       isOpen = open;
+
       toggleBtn.setAttribute("aria-expanded", String(open));
       drawer.setAttribute("aria-hidden", String(!open));
       drawer.classList.toggle("is-open", open);
       backdrop.classList.toggle("is-open", open);
       document.body.style.overflow = open ? "hidden" : "";
+
+      if (lenis) {
+        if (open) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
+      }
+
       if (open) {
         var header = document.querySelector(".site-header");
         if (header) header.classList.remove("header-hidden");
@@ -154,7 +164,6 @@
         toggleBtn.focus();
       }
     }
-
     toggleBtn.addEventListener("click", function () {
       setOpen(true);
     });
@@ -598,8 +607,10 @@
   });
 })();
 
+let lenis;
+
 document.addEventListener("DOMContentLoaded", function () {
-  const lenis = new Lenis({
+  lenis = new Lenis({
     duration: 2,
     smoothWheel: true,
     wheelMultiplier: 1,
@@ -614,7 +625,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   requestAnimationFrame(raf);
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("video-modal");
   const modalVideo = document.getElementById("modal-video");

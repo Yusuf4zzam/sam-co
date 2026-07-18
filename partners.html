@@ -231,6 +231,7 @@
         </div>
         <nav
           class="navbar-section hidden items-center space-x-6 lg:flex"
+          data-lenis-prevent
           aria-label="Primary"
         >
           <ul class="flex space-x-6">
@@ -290,13 +291,6 @@
                 >Contact</a
               >
             </li>
-            <li>
-              <a
-                class="text-white hover:text-secondary transition-colors duration-300 font-medium xl:text-lg text-sm"
-                href="./contact.html"
-                >Contact</a
-              >
-            </li>
           </ul>
           <a
             class="rounded-md xl:text-lg text-sm bg-secondary-deep px-4 py-2 font-semibold text-white transition-colors duration-300 border border-transparent hover:bg-white hover:text-primary"
@@ -333,7 +327,7 @@
 
     <!-- Mobile drawer -->
     <div id="mobile-menu-backdrop"></div>
-    <aside id="mobile-menu" aria-hidden="true">
+    <aside id="mobile-menu" aria-hidden="true" data-lenis-prevent>
       <div
         class="flex items-center justify-between border-b border-white/10 px-6 py-5"
       >
@@ -420,13 +414,6 @@
               >Contact</a
             >
           </li>
-          <li class="drawer-link drawer-link-8">
-            <a
-              class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
-              href="./contact.html"
-              >Contact</a
-            >
-          </li>
         </ul>
         <a
           class="drawer-link drawer-link-9 mt-8 block rounded-md bg-secondary-deep px-4 py-3 text-center font-semibold text-white"
@@ -464,10 +451,10 @@
     <main id="main-content">
       <!-- ============ HERO BANNER ============ -->
       <section
-        class="relative flex h-[70svh] min-h-[440px] w-full items-center overflow-hidden"
+        class="relative flex h-[86svh] min-h-[440px] w-full items-center overflow-hidden"
       >
         <img
-          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2400&auto=format&fit=crop"
+          src="./assets/images/hero-partner.jpeg"
           alt="Sam & Co partners in conversation"
           class="absolute inset-0 h-full w-full object-cover"
           width="2400"
@@ -490,7 +477,7 @@
             >
               A network of senior practitioners, not a bench of consultants.
             </h1>
-            <p class="mt-6 max-w-xl text-base text-light/90 sm:text-lg text-sm">
+            <p class="mt-6 max-w-xl text-light/90 sm:text-lg text-sm">
               Every name on this page has led the function they now advise on —
               inside a government, a bank, an energy operator, a hospital
               system. That's the entire premise of Sam & Co: you get the person
@@ -646,53 +633,6 @@
               </div>
             </a>
 
-            <!-- Partner 2: Marina Andrusik -->
-            <a
-              href="./partner-marina.html"
-              class="reveal reveal-2 group block overflow-hidden rounded-2xl shadow-sm transition-shadow duration-300 hover:shadow-xl bg-white"
-            >
-              <div class="relative overflow-hidden">
-                <img
-                  src="./assets/images/partners/Marina's Photo.png"
-                  alt="Portrait of Marina Andrusik"
-                  class="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  width="900"
-                  height="1100"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"
-                ></div>
-                <div
-                  class="absolute inset-0 flex items-end bg-gradient-to-t from-primary/90 via-primary/0 to-primary/0 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                >
-                  <span
-                    class="inline-flex items-center gap-1.5 text-sm font-semibold text-white"
-                  >
-                    View Profile
-                    <span
-                      aria-hidden="true"
-                      class="transition-transform group-hover:translate-x-1"
-                      >→</span
-                    >
-                  </span>
-                </div>
-              </div>
-              <div class="p-5">
-                <h3 class="font-display text-lg text-primary">
-                  Marina Andrusik
-                </h3>
-                <p class="text-sm text-accent/70">
-                  Partner, Program & Portfolio Management
-                </p>
-                <p class="mt-2 text-sm leading-relaxed text-accent/90">
-                  Over 19 years of experience in business transformation and
-                  operational excellence across global financial institutions.
-                </p>
-              </div>
-            </a>
-
             <!-- Partner 3: Obaid Ali -->
             <a
               href="./partner-obaid.html"
@@ -782,6 +722,53 @@
                 <p class="mt-2 text-sm leading-relaxed text-accent/90">
                   Nearly 30 years of advisory experience across Life Sciences,
                   Manufacturing, Public Sector, and Emerging Technology.
+                </p>
+              </div>
+            </a>
+
+            <!-- Partner 2: Marina Andrusik -->
+            <a
+              href="./partner-marina.html"
+              class="reveal reveal-2 group block overflow-hidden rounded-2xl shadow-sm transition-shadow duration-300 hover:shadow-xl bg-white"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/images/partners/Marina's Photo.png"
+                  alt="Portrait of Marina Andrusik"
+                  class="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  width="900"
+                  height="1100"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"
+                ></div>
+                <div
+                  class="absolute inset-0 flex items-end bg-gradient-to-t from-primary/90 via-primary/0 to-primary/0 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <span
+                    class="inline-flex items-center gap-1.5 text-sm font-semibold text-white"
+                  >
+                    View Profile
+                    <span
+                      aria-hidden="true"
+                      class="transition-transform group-hover:translate-x-1"
+                      >→</span
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-lg text-primary">
+                  Marina Andrusik
+                </h3>
+                <p class="text-sm text-accent/70">
+                  Partner, Program & Portfolio Management
+                </p>
+                <p class="mt-2 text-sm leading-relaxed text-accent/90">
+                  Over 19 years of experience in business transformation and
+                  operational excellence across global financial institutions.
                 </p>
               </div>
             </a>

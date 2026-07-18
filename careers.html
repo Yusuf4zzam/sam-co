@@ -238,6 +238,7 @@
 
         <nav
           class="navbar-section hidden items-center space-x-6 lg:flex"
+          data-lenis-prevent
           aria-label="Primary"
         >
           <ul class="flex space-x-6">
@@ -334,7 +335,7 @@
 
     <!-- Mobile drawer -->
     <div id="mobile-menu-backdrop"></div>
-    <aside id="mobile-menu" aria-hidden="true">
+    <aside id="mobile-menu" aria-hidden="true" data-lenis-prevent>
       <div
         class="flex items-center justify-between border-b border-white/10 px-6 py-5"
       >
@@ -414,7 +415,6 @@
               >Careers</a
             >
           </li>
-          </li>
           <li class="drawer-link drawer-link-8">
             <a
               class="block rounded-md px-3 py-3 text-lg font-medium text-white hover:bg-white/10"
@@ -459,10 +459,10 @@
     <main id="main-content">
       <!-- ============ HERO SECTION ============ -->
       <section
-        class="relative flex h-[65svh] min-h-[460px] w-full items-center overflow-hidden py-12"
+        class="relative flex h-[86svh] min-h-[460px] w-full items-center overflow-hidden py-12"
       >
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2400&auto=format&fit=crop"
+          src="./assets/images/careers-hero.jpeg"
           alt="Global network of professionals collaborating"
           class="absolute inset-0 h-full w-full object-cover"
           width="2400"
@@ -880,7 +880,7 @@
 
           <div class="pin-group reveal reveal-2 mt-14 sm:mt-16">
             <!-- Route line + dots -->
-            <div class="relative mx-auto hidden h-32 w-full max-w-4xl sm:block">
+            <div class="relative mx-auto hidden h-32 w-full sm:block">
               <svg
                 viewBox="0 0 100 32"
                 preserveAspectRatio="none"
@@ -1267,15 +1267,15 @@
           </div>
 
           <div class="mt-14 grid gap-8 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Partner 1 -->
+            <!-- Partner 1: Tolulope Samuel -->
             <div
               class="reveal reveal-1 group overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
               <div class="relative overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
-                  alt="Senior Partner"
-                  class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="./assets/images/partners/Tolu's Photo.jpg"
+                  alt="Tolulope Samuel - Managing Partner at Sam & Co"
+                  class="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   width="600"
                   height="450"
                   loading="lazy"
@@ -1288,7 +1288,7 @@
                   class="absolute bottom-4 left-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 >
                   <a
-                    href="https://www.linkedin.com/company/sam-co-ca/"
+                    href="https://www.linkedin.com/in/tolulope-samuel-46271772/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-primary hover:bg-white"
@@ -1308,107 +1308,110 @@
               </div>
               <div class="p-6">
                 <h3 class="font-display text-lg text-primary">
-                  Sarah Mitchell
+                  Tolulope Samuel
                 </h3>
                 <p class="text-sm font-medium text-secondary-deep">
                   Managing Partner
                 </p>
                 <p class="mt-2 text-sm leading-relaxed text-accent/80">
-                  Former COO in financial services with 20+ years of experience
-                  leading transformation programs across North America and the
-                  UK.
+                  Business transformation and strategy executive with over 18
+                  years of experience advising C-suite leaders across financial
+                  services, government, retail, and supply chain.
                 </p>
                 <div class="mt-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
+                    >Enterprise Strategy</span
+                  >
+                  <span
+                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
+                    >Business Transformation</span
+                  >
+                  <span
+                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
+                    >Digital & Technology</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Partner 2: Marina Andrusik -->
+            <div
+              class="reveal reveal-2 group overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
+            >
+              <div class="relative overflow-hidden">
+                <img
+                  src="./assets/images/partners/Marina's Photo.png"
+                  alt="Marina Andrusik - Partner at Sam & Co"
+                  class="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/marina-andrusik/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-primary hover:bg-white"
+                  >
+                    <svg
+                      class="h-3.5 w-3.5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                      />
+                    </svg>
+                    Connect
+                  </a>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-lg text-primary">
+                  Marina Andrusik
+                </h3>
+                <p class="text-sm font-medium text-secondary-deep">
+                  Partner, Program & Portfolio Management
+                </p>
+                <p class="mt-2 text-sm leading-relaxed text-accent/80">
+                  Over 19 years of experience in business transformation and
+                  operational excellence across global financial institutions.
+                  Former SVP at Citibank.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                  <span
+                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
+                    >Banking</span
+                  >
                   <span
                     class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
                     >Financial Services</span
                   >
                   <span
                     class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Transformation</span
-                  >
-                  <span
-                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Strategy</span
+                    >Program Management</span
                   >
                 </div>
               </div>
             </div>
 
-            <!-- Partner 2 -->
-            <div
-              class="reveal reveal-2 group overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
-            >
-              <div class="relative overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
-                  alt="Senior Partner"
-                  class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  width="600"
-                  height="450"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                ></div>
-                <div
-                  class="absolute bottom-4 left-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                >
-                  <a
-                    href="https://www.linkedin.com/company/sam-co-ca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-primary hover:bg-white"
-                  >
-                    <svg
-                      class="h-3.5 w-3.5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
-                      />
-                    </svg>
-                    Connect
-                  </a>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="font-display text-lg text-primary">James Okafor</h3>
-                <p class="text-sm font-medium text-secondary-deep">
-                  Partner, Public Sector
-                </p>
-                <p class="mt-2 text-sm leading-relaxed text-accent/80">
-                  Former Deputy Minister with deep expertise in public sector
-                  transformation, policy design, and organizational change.
-                </p>
-                <div class="mt-3 flex flex-wrap gap-1.5">
-                  <span
-                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Public Sector</span
-                  >
-                  <span
-                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Policy</span
-                  >
-                  <span
-                    class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Governance</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Partner 3 -->
+            <!-- Partner 3: Ahmed Azzam -->
             <div
               class="reveal reveal-3 group overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
             >
               <div class="relative overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
-                  alt="Senior Partner"
-                  class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="./assets/images/partners/Ahmed's Picture.jpeg"
+                  alt="Ahmed Azzam - Partner at Sam & Co"
+                  class="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   width="600"
                   height="450"
                   loading="lazy"
@@ -1421,7 +1424,7 @@
                   class="absolute bottom-4 left-4 right-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 >
                   <a
-                    href="https://www.linkedin.com/company/sam-co-ca/"
+                    href="https://www.linkedin.com/in/ahmed-azzam/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-primary hover:bg-white"
@@ -1440,27 +1443,27 @@
                 </div>
               </div>
               <div class="p-6">
-                <h3 class="font-display text-lg text-primary">Elena Dubois</h3>
+                <h3 class="font-display text-lg text-primary">Ahmed Azzam</h3>
                 <p class="text-sm font-medium text-secondary-deep">
-                  Partner, Energy & Infrastructure
+                  Partner, Enterprise AI, Intelligent Operations & Supply Chain
                 </p>
                 <p class="mt-2 text-sm leading-relaxed text-accent/80">
-                  Former VP at a global energy firm with expertise in
-                  infrastructure development, sustainability strategy, and
-                  cross-border delivery.
+                  Technology executive and entrepreneur with over 20 years of
+                  experience leading enterprise transformation, AI-enabled
+                  innovation, and digital product strategy.
                 </p>
                 <div class="mt-3 flex flex-wrap gap-1.5">
                   <span
                     class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Energy</span
+                    >Enterprise AI</span
                   >
                   <span
                     class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Infrastructure</span
+                    >Intelligent Automation</span
                   >
                   <span
                     class="rounded-full bg-light px-2.5 py-0.5 text-xs text-primary"
-                    >Sustainability</span
+                    >Supply Chain</span
                   >
                 </div>
               </div>
@@ -1508,7 +1511,7 @@
               <!-- Left Side - Image -->
               <div class="relative hidden md:block">
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop"
+                  src="./assets/images/careers/90.png"
                   alt="Professional consultant on a call"
                   class="h-full w-full object-cover"
                   width="1200"

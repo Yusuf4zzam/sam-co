@@ -248,6 +248,8 @@ h3,
   z-index: 60;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   width: 100%;
   max-width: 22rem;
   background-color: var(--color-primary);

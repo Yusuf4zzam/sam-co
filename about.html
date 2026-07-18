@@ -262,6 +262,7 @@
 
         <nav
           class="navbar-section hidden items-center space-x-6 lg:flex"
+          data-lenis-prevent
           aria-label="Primary"
         >
           <ul class="flex space-x-6">
@@ -362,7 +363,7 @@
     <div id="mobile-menu-backdrop"></div>
 
     <!-- Mobile drawer (slides in from the right) -->
-    <aside id="mobile-menu" aria-hidden="true">
+    <aside id="mobile-menu" aria-hidden="true" data-lenis-prevent>
       <div
         class="flex items-center justify-between border-b border-white/10 px-6 py-5"
       >
@@ -487,10 +488,10 @@
     <main id="main-content">
       <!-- ============ HERO BANNER ============ -->
       <section
-        class="relative flex h-[70svh] min-h-[440px] w-full items-center overflow-hidden"
+        class="relative flex h-[86svh] min-h-[440px] w-full items-center overflow-hidden"
       >
         <img
-          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2400&auto=format&fit=crop"
+          src="./assets/images/about/30.png"
           alt="Sam & Co partners in conversation"
           class="absolute inset-0 h-full w-full object-cover"
           width="2400"
@@ -513,7 +514,7 @@
             >
               A collective built on trust, execution, and tailored solutions.
             </h1>
-            <p class="mt-6 max-w-xl text-base text-light/90 sm:text-lg text-sm">
+            <p class="mt-6 max-w-xl text-light/90 sm:text-lg text-sm">
               We're not a firm that sells a methodology off a slide. We're
               senior practitioners who've run the functions we now advise on —
               brought together because clients kept asking us to work together.
@@ -629,7 +630,7 @@
                 class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-10"
               ></div>
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&amp;w=1600&amp;auto=format&amp;fit=crop"
+                src="./assets/images/about/5 (2).png"
                 alt="Sam &amp; Co consultants in a strategy session"
                 class="aspect-[4/3] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 sm:aspect-[5/4]"
                 width="1600"

@@ -244,6 +244,7 @@
 
         <nav
           class="navbar-section hidden items-center space-x-6 lg:flex"
+          data-lenis-prevent
           aria-label="Primary"
         >
           <ul class="flex space-x-6">
@@ -340,7 +341,7 @@
 
     <!-- Mobile drawer -->
     <div id="mobile-menu-backdrop"></div>
-    <aside id="mobile-menu" aria-hidden="true">
+    <aside id="mobile-menu" aria-hidden="true" data-lenis-prevent>
       <div
         class="flex items-center justify-between border-b border-white/10 px-6 py-5"
       >
@@ -477,7 +478,7 @@
             >
               Insights Details
             </h1>
-            <p class="mt-6 max-w-xl text-base text-light/90 sm:text-lg text-sm">
+            <p class="mt-6 max-w-xl text-light/90 sm:text-lg text-sm">
               We write and speak about what we actually see in engagements —
               what stalls transformation programs, what boards ask that
               leadership isn't ready for, and what execution looks like once the

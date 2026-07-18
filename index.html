@@ -237,6 +237,7 @@
 
         <nav
           class="navbar-section hidden items-center space-x-6 lg:flex"
+          data-lenis-prevent
           aria-label="Primary"
         >
           <ul class="flex space-x-6">
@@ -337,7 +338,7 @@
     <div id="mobile-menu-backdrop"></div>
 
     <!-- Mobile drawer (slides in from the right) -->
-    <aside id="mobile-menu" aria-hidden="true">
+    <aside id="mobile-menu" aria-hidden="true" data-lenis-prevent>
       <div
         class="flex items-center justify-between border-b border-white/10 px-6 py-5"
       >
@@ -481,7 +482,7 @@
                 muted
                 loop
                 playsinline
-                poster="./assets/images/hero-slide-img-1.jpeg"
+                poster="./assets/images/home/hero-slide-img-1.jpeg"
                 aria-hidden="true"
               >
                 <source
@@ -568,7 +569,7 @@
                 muted
                 loop
                 playsinline
-                poster="./assets/images/hero-slide-img-2.jpeg"
+                poster="./assets/images/home/hero-slide-img-2.jpeg"
                 aria-hidden="true"
               >
                 <source
@@ -652,7 +653,7 @@
                 muted
                 loop
                 playsinline
-                poster="./assets/images/hero-slide-img-3.jpg"
+                poster="./assets/images/home/hero-slide-img-3.jpg"
                 aria-hidden="true"
               >
                 <source
@@ -942,7 +943,7 @@
                 class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-10"
               ></div>
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1600&auto=format&fit=crop"
+                src="./assets/images/home/46.png"
                 alt="Sam & Co consultants in a strategy session"
                 class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:aspect-[5/4]"
                 width="1600"
@@ -984,9 +985,9 @@
               class="reveal reveal-1 group relative block overflow-hidden rounded-xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=900&auto=format&fit=crop"
+                src="./assets/images/services/59.png"
                 alt="partner session with an executive team"
-                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                class="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                 width="900"
                 height="1200"
                 loading="lazy"
@@ -1022,9 +1023,9 @@
               class="reveal reveal-2 group relative block overflow-hidden rounded-xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop"
+                src="./assets/images/services/89.png"
                 alt="Team working through a transformation plan"
-                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                class="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                 width="900"
                 height="1200"
                 loading="lazy"
@@ -1060,9 +1061,9 @@
               class="reveal reveal-3 group relative block overflow-hidden rounded-xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=900&auto=format&fit=crop"
+                src="./assets/images/services/74.png"
                 alt="Leadership training workshop"
-                class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                class="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                 width="900"
                 height="1200"
                 loading="lazy"
@@ -1095,22 +1096,17 @@
 
             <a
               href="./services-detail.html"
-              class="reveal reveal-4 group relative block overflow-hidden rounded-xl"
+              class="reveal reveal-3 group relative block overflow-hidden rounded-xl"
             >
-              <div class="overflow-hidden shadow-xl relative group">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-10"
-                ></div>
-                <img
-                  src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?q=80&w=900&auto=format&fit=crop"
-                  alt="Facilitated executive planning session"
-                  class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  width="900"
-                  height="1200"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+              <img
+                src="./assets/images/services/66.png"
+                alt="Leadership training workshop"
+                class="aspect-[3/4] w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"
               ></div>
@@ -1197,7 +1193,7 @@
                   class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-10"
                 ></div>
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
+                  src="./assets/images/features/32 (2).png"
                   alt="Executive team in a working session"
                   class="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   width="1200"
@@ -1226,9 +1222,9 @@
                   class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-10"
                 ></div>
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+                  src="./assets/images/features/34.png"
                   alt="International business district"
-                  class="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  class="aspect-[16/10] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   width="1200"
                   height="750"
                   loading="lazy"
@@ -1255,9 +1251,9 @@
                   class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent z-10"
                 ></div>
                 <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+                  src="./assets/images/features/4.png"
                   alt="Consultants reviewing strategy documents"
-                  class="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  class="aspect-[16/10] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   width="1200"
                   height="750"
                   loading="lazy"
