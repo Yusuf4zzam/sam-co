@@ -398,7 +398,7 @@ img {
   color: transparent;
 } /* hide broken-image alt icon flash, alt text still read by AT */
 
-/* Skill progress bars (Conxora "Our Experience" pattern) */
+/* Skill progress bars ( "Our Experience" pattern) */
 .skill-bar-track {
   position: relative;
   height: 0.5rem;
@@ -415,7 +415,7 @@ img {
   transition: width 1.1s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-/* Numbered interactive service list (Conxora "Services We Offer" pattern) */
+/* Numbered interactive service list ( "Services We Offer" pattern) */
 .service-tab {
   cursor: pointer;
   transition:

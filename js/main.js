@@ -426,7 +426,7 @@
   }
 
   // ---------------------------------------------------------------------
-  // FAQ accordion (Conxora Home 5-style) — no-ops on pages without .faq-item
+  // FAQ accordion ( Home 5-style) — no-ops on pages without .faq-item
   // ---------------------------------------------------------------------
   function initFAQAccordion() {
     var items = document.querySelectorAll(".faq-item");
@@ -461,7 +461,7 @@
   }
 
   // ---------------------------------------------------------------------
-  // Skill progress bars (Conxora "Our Experience" pattern) — animate width
+  // Skill progress bars ( "Our Experience" pattern) — animate width
   // once when scrolled into view, no-ops on pages without .skill-bar-fill
   // ---------------------------------------------------------------------
   function initSkillBars() {
@@ -496,7 +496,7 @@
   }
 
   // ---------------------------------------------------------------------
-  // Numbered interactive service list (Conxora "Services We Offer" pattern)
+  // Numbered interactive service list ( "Services We Offer" pattern)
   // Clicking a numbered row swaps the active description + image. No-ops
   // on pages without .service-tab.
   // ---------------------------------------------------------------------
