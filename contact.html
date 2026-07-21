@@ -181,7 +181,7 @@
 
           <!-- Instagram icon -->
           <a
-            href="https://www.instagram.com/samandco/"
+            href="https://www.instagram.com/samandco.consulting.ca?igsh=ZHNzYzZpcmpqcXZy"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Sam & Co on Instagram"
@@ -201,7 +201,7 @@
 
           <!-- Facebook icon -->
           <a
-            href="https://www.facebook.com/samandco/"
+            href="https://www.facebook.com/share/198oMUHjAn/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Sam & Co on Facebook"
@@ -623,7 +623,7 @@
                       for="contact-phone"
                       class="block text-sm font-medium text-primary"
                     >
-                      Phone Number
+                      Phone Number <span class="text-secondary-deep">*</span>
                     </label>
                     <input
                       type="tel"
@@ -632,7 +632,16 @@
                       autocomplete="tel"
                       class="mt-1.5 block w-full rounded-lg border border-primary/20 bg-light/50 px-4 py-3 text-sm text-accent transition-colors duration-300 focus:border-secondary-deep focus:outline-none focus:ring-2 focus:ring-secondary-deep/20"
                       placeholder="+1 (555) 000-0000"
+                      required
+                      inputmode="numeric"
+                      autocomplete="tel"
                     />
+                    <p
+                      id="contact-phone-error"
+                      class="mt-1 hidden text-sm text-secondary-deep"
+                    >
+                      Phone number is required.
+                    </p>
                   </div>
 
                   <!-- Company -->
@@ -642,6 +651,7 @@
                       class="block text-sm font-medium text-primary"
                     >
                       Company / Organization
+                      <span class="text-secondary-deep">*</span>
                     </label>
                     <input
                       type="text"
@@ -650,7 +660,14 @@
                       autocomplete="organization"
                       class="mt-1.5 block w-full rounded-lg border border-primary/20 bg-light/50 px-4 py-3 text-sm text-accent transition-colors duration-300 focus:border-secondary-deep focus:outline-none focus:ring-2 focus:ring-secondary-deep/20"
                       placeholder="Your Company"
+                      required
                     />
+                    <p
+                      id="contact-company-error"
+                      class="mt-1 hidden text-sm text-secondary-deep"
+                    >
+                      Company is required.
+                    </p>
                   </div>
 
                   <!-- Message -->
@@ -825,7 +842,7 @@
                         </svg>
                       </a>
                       <a
-                        href="https://www.instagram.com/samandco/"
+                        href="https://www.instagram.com/samandco.consulting.ca?igsh=ZHNzYzZpcmpqcXZy"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
@@ -842,7 +859,7 @@
                         </svg>
                       </a>
                       <a
-                        href="https://www.facebook.com/samandco/"
+                        href="https://www.facebook.com/share/198oMUHjAn/?mibextid=wwXIfr"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
@@ -1429,21 +1446,165 @@ C780,250 860,225 930,200"
     <script src="./js/lenis.js"></script>
     <script src="js/main.js"></script>
 
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
     <!-- Contact Form Handler -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contact-form");
 
-        // Check if form exists
         if (!form) {
           console.warn("Contact form not found");
           return;
         }
 
-        // ---- Form Validation ----
+        // ------------------------------------------------------------
+        // EmailJS Configuration
+        // The EmailJS Private Key is intentionally NOT included here.
+        // Frontend/browser integrations should use the Public Key only.
+        // ------------------------------------------------------------
+        const EMAILJS_PUBLIC_KEY = "Vet2MZN5wolwUaPR6";
+        const EMAILJS_SERVICE_ID = "service_1t5hm16";
+        const EMAILJS_TEMPLATE_ID = "template_cogyxle";
+
+        if (typeof emailjs !== "undefined") {
+          emailjs.init({
+            publicKey: EMAILJS_PUBLIC_KEY,
+          });
+        } else {
+          console.error("EmailJS library failed to load.");
+        }
+
+        // ------------------------------------------------------------
+        // Modal Elements
+        // ------------------------------------------------------------
+        const successModal = document.getElementById("success-modal");
+        const errorModal = document.getElementById("error-modal");
+
+        const successModalContent = successModal
+          ? successModal.querySelector("[data-modal-content]")
+          : null;
+
+        const errorModalContent = errorModal
+          ? errorModal.querySelector("[data-modal-content]")
+          : null;
+
+        const successCloseButton = document.getElementById(
+          "success-modal-close",
+        );
+        const errorCloseButton = document.getElementById("error-modal-close");
+
+        const errorModalTitle = document.getElementById("error-modal-title");
+        const errorModalMessage = document.getElementById(
+          "error-modal-message",
+        );
+
+        let activeModal = null;
+
+        // ------------------------------------------------------------
+        // Modal Helpers
+        // ------------------------------------------------------------
+        function openModal(modal, content) {
+          if (!modal || !content) return;
+
+          if (activeModal && activeModal !== modal) {
+            closeModal(activeModal);
+          }
+
+          activeModal = modal;
+
+          modal.classList.remove("pointer-events-none", "opacity-0");
+          modal.classList.add("pointer-events-auto", "opacity-100");
+
+          content.classList.remove("scale-95", "opacity-0");
+          content.classList.add("scale-100", "opacity-100");
+
+          document.body.classList.add("overflow-hidden");
+
+          modal.setAttribute("aria-hidden", "false");
+        }
+
+        function closeModal(modal) {
+          if (!modal) return;
+
+          const content = modal.querySelector("[data-modal-content]");
+
+          modal.classList.remove("pointer-events-auto", "opacity-100");
+          modal.classList.add("pointer-events-none", "opacity-0");
+
+          if (content) {
+            content.classList.remove("scale-100", "opacity-100");
+            content.classList.add("scale-95", "opacity-0");
+          }
+
+          modal.setAttribute("aria-hidden", "true");
+
+          if (activeModal === modal) {
+            activeModal = null;
+            document.body.classList.remove("overflow-hidden");
+          }
+        }
+
+        function showSuccessModal() {
+          openModal(successModal, successModalContent);
+        }
+
+        function showErrorModal(title, message) {
+          if (errorModalTitle) {
+            errorModalTitle.textContent = title || "Message Could Not Be Sent";
+          }
+
+          if (errorModalMessage) {
+            errorModalMessage.textContent =
+              message ||
+              "We couldn't send your message right now. Please try again later.";
+          }
+
+          openModal(errorModal, errorModalContent);
+        }
+
+        // Close buttons
+        if (successCloseButton) {
+          successCloseButton.addEventListener("click", function () {
+            closeModal(successModal);
+          });
+        }
+
+        if (errorCloseButton) {
+          errorCloseButton.addEventListener("click", function () {
+            closeModal(errorModal);
+          });
+        }
+
+        // Close when clicking the overlay
+        [successModal, errorModal].forEach(function (modal) {
+          if (!modal) return;
+
+          modal.addEventListener("click", function (event) {
+            if (event.target === modal) {
+              closeModal(modal);
+            }
+          });
+        });
+
+        // Close with Escape
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && activeModal) {
+            closeModal(activeModal);
+          }
+        });
+
+        // ------------------------------------------------------------
+        // Form Validation
+        // ------------------------------------------------------------
         function validateField(id, errorId, condition) {
           const field = document.getElementById(id);
           const error = document.getElementById(errorId);
+
           if (!field || !error) return false;
 
           if (!condition) {
@@ -1454,45 +1615,108 @@ C780,250 860,225 930,200"
             );
             error.classList.remove("hidden");
             return false;
-          } else {
-            field.classList.remove(
-              "border-secondary-deep",
-              "ring-2",
-              "ring-secondary-deep/20",
-            );
-            error.classList.add("hidden");
-            return true;
           }
+
+          field.classList.remove(
+            "border-secondary-deep",
+            "ring-2",
+            "ring-secondary-deep/20",
+          );
+          error.classList.add("hidden");
+
+          return true;
         }
 
-        // ---- Form Submit ----
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // Validate all fields
+        function validateForm() {
           const name = document.getElementById("contact-name");
           const email = document.getElementById("contact-email");
           const message = document.getElementById("contact-message");
+          const phone = document.getElementById("contact-phone");
+          const company = document.getElementById("contact-company");
+
+          const isPhoneValid = validateField(
+            "contact-phone",
+            "contact-phone-error",
+            phone && phone.value.trim().length > 0,
+          );
+
+          const isCompanyValid = validateField(
+            "contact-company",
+            "contact-company-error",
+            company && company.value.trim().length > 0,
+          );
 
           const isNameValid = validateField(
             "contact-name",
             "contact-name-error",
             name && name.value.trim().length > 0,
           );
+
           const isEmailValid = validateField(
             "contact-email",
             "contact-email-error",
-            email && email.value.trim().length > 0 && email.value.includes("@"),
+            email && email.value.trim().length > 0 && email.validity.valid,
           );
+
           const isMessageValid = validateField(
             "contact-message",
             "contact-message-error",
             message && message.value.trim().length > 0,
           );
 
-          if (!isNameValid || !isEmailValid || !isMessageValid) {
-            // Scroll to first error
+          return {
+            isValid:
+              isNameValid &&
+              isEmailValid &&
+              isPhoneValid &&
+              isCompanyValid &&
+              isMessageValid,
+            name,
+            email,
+            phone,
+            company,
+            message,
+          };
+        }
+
+        // ------------------------------------------------------------
+        // Submit Button State
+        // ------------------------------------------------------------
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitBtn
+          ? submitBtn.textContent.trim()
+          : "Send Message";
+
+        function setSubmittingState(isSubmitting) {
+          if (!submitBtn) return;
+
+          submitBtn.disabled = isSubmitting;
+          submitBtn.classList.toggle("opacity-70", isSubmitting);
+          submitBtn.classList.toggle("cursor-not-allowed", isSubmitting);
+          submitBtn.classList.toggle("cursor-pointer", !isSubmitting);
+
+          submitBtn.textContent = isSubmitting
+            ? "Sending..."
+            : originalButtonText;
+        }
+
+        // ------------------------------------------------------------
+        // Form Submit
+        // ------------------------------------------------------------
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Prevent multiple submissions
+          if (submitBtn && submitBtn.disabled) {
+            return;
+          }
+
+          const validation = validateForm();
+
+          // Case 1: Validation failed
+          if (!validation.isValid) {
             const firstError = form.querySelector(".border-secondary-deep");
+
             if (firstError) {
               firstError.focus();
               firstError.scrollIntoView({
@@ -1500,66 +1724,290 @@ C780,250 860,225 930,200"
                 block: "center",
               });
             }
+
             return;
           }
 
-          // Get form data
-          const formData = {
-            name: name.value,
-            email: email.value,
-            phone: document.getElementById("contact-phone")?.value || "",
-            company: document.getElementById("contact-company")?.value || "",
-            message: message.value,
+          // Make sure EmailJS is available
+          if (typeof emailjs === "undefined") {
+            console.error("EmailJS is not available.");
+
+            showErrorModal(
+              "Message Could Not Be Sent",
+              "We couldn't send your message right now. Please try again later.",
+            );
+
+            return;
+          }
+
+          const phone =
+            document.getElementById("contact-phone")?.value.trim() || "";
+          const company =
+            document.getElementById("contact-company")?.value.trim() || "";
+
+          // These parameter names must match the EmailJS template variables.
+          const templateParams = {
+            from_name: validation.name.value.trim(),
+            from_email: validation.email.value.trim(),
+            to_phone: phone,
+            company: company,
+            message: validation.message.value.trim(),
+            to_name: "Sam & Co",
+            to_email: "yusuf4zzam@gmail.com",
           };
 
-          // Log form data
-          console.log("Contact form submitted:", formData);
+          setSubmittingState(true);
 
-          // Show success message
-          const submitBtn = form.querySelector('button[type="submit"]');
-          const originalText = submitBtn.textContent;
-          submitBtn.disabled = true;
-          submitBtn.textContent = "✓ Message Sent!";
-          submitBtn.classList.add("bg-green-600");
-          submitBtn.classList.remove("bg-secondary-deep");
+          // Case 2 & 3: Send through EmailJS
+          emailjs
+            .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+            .then(function (response) {
+              // Only reset after EmailJS successfully sends the email.
+              form.reset();
 
-          // Reset form after a delay
-          setTimeout(() => {
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-            submitBtn.classList.remove("bg-green-600");
-            submitBtn.classList.add("bg-secondary-deep");
-          }, 5000);
+              // Clear validation errors
+              form
+                .querySelectorAll(
+                  ".border-secondary-deep, .ring-2, .ring-secondary-deep\\/20",
+                )
+                .forEach(function (field) {
+                  field.classList.remove(
+                    "border-secondary-deep",
+                    "ring-2",
+                    "ring-secondary-deep/20",
+                  );
+                });
+
+              form.querySelectorAll('[id$="-error"]').forEach(function (error) {
+                error.classList.add("hidden");
+              });
+
+              setSubmittingState(false);
+              showSuccessModal();
+            })
+            .catch(function (error) {
+              // Do NOT reset the form when EmailJS fails.
+              setSubmittingState(false);
+
+              showErrorModal(
+                "Message Could Not Be Sent",
+                "We couldn't send your message right now. Please try again later.",
+              );
+            });
         });
 
-        // Input focus/validation clearing
+        // ------------------------------------------------------------
+        // Input Focus / Validation Clearing
+        // ------------------------------------------------------------
         const formInputs = form.querySelectorAll("input, textarea");
-        formInputs.forEach((input) => {
+
+        formInputs.forEach(function (input) {
           input.addEventListener("input", function () {
             this.classList.remove(
               "border-secondary-deep",
               "ring-2",
               "ring-secondary-deep/20",
             );
+
             const errorId = this.id + "-error";
             const error = document.getElementById(errorId);
-            if (error) error.classList.add("hidden");
+
+            if (error) {
+              error.classList.add("hidden");
+            }
           });
+
           input.addEventListener("blur", function () {
-            if (this.hasAttribute("required") && !this.value.trim()) {
+            if (!this.hasAttribute("required")) {
+              return;
+            }
+
+            let isValid = this.value.trim().length > 0;
+
+            if (this.type === "email") {
+              isValid = isValid && this.validity.valid;
+            }
+
+            if (!isValid) {
               this.classList.add(
                 "border-secondary-deep",
                 "ring-2",
                 "ring-secondary-deep/20",
               );
+
               const errorId = this.id + "-error";
               const error = document.getElementById(errorId);
-              if (error) error.classList.remove("hidden");
+
+              if (error) {
+                error.classList.remove("hidden");
+              }
             }
           });
         });
       });
+
+      const phoneInput = document.getElementById("contact-phone");
+
+      phoneInput.addEventListener("input", function () {
+        // Keep digits only
+        this.value = this.value.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
+      });
     </script>
+
+    <!-- Success Modal -->
+    <div
+      id="success-modal"
+      class="fixed inset-0 z-[200] flex items-center justify-center bg-dark/60 p-4 pointer-events-none opacity-0 transition-all duration-500 ease-out"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="success-modal-title"
+      aria-describedby="success-modal-description"
+    >
+      <div
+        data-modal-content
+        class="relative w-full max-w-md scale-95 opacity-0 transition-all duration-500 ease-out"
+      >
+        <div class="rounded-2xl bg-white p-8 text-center shadow-2xl">
+          <!-- Success Icon -->
+          <div
+            class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-100"
+          >
+            <svg
+              class="h-10 w-10 text-green-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0"
+              />
+            </svg>
+          </div>
+
+          <h3
+            id="success-modal-title"
+            class="font-display text-2xl text-primary"
+          >
+            Message Sent Successfully!
+          </h3>
+
+          <p id="success-modal-description" class="mt-2 text-sm text-accent/80">
+            Thank you for contacting us. Your message has been received
+            successfully.
+          </p>
+
+          <div class="mt-4 rounded-lg bg-light p-4 text-left">
+            <p class="text-sm text-accent/80">
+              Our team will review your message and get back to you as soon as
+              possible.
+            </p>
+          </div>
+        </div>
+
+        <!-- Close button -->
+        <button
+          id="success-modal-close"
+          type="button"
+          aria-label="Close success message"
+          class="absolute -top-10 right-0 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div
+      id="error-modal"
+      class="fixed inset-0 z-[200] flex items-center justify-center bg-dark/60 p-4 pointer-events-none opacity-0 transition-all duration-500 ease-out"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-labelledby="error-modal-title"
+      aria-describedby="error-modal-message"
+    >
+      <div
+        data-modal-content
+        class="relative w-full max-w-md scale-95 opacity-0 transition-all duration-500 ease-out"
+      >
+        <div class="rounded-2xl bg-white p-8 text-center shadow-2xl">
+          <!-- Error Icon -->
+          <div
+            class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-red-100"
+          >
+            <svg
+              class="h-10 w-10 text-red-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+
+          <h3 id="error-modal-title" class="font-display text-2xl text-primary">
+            Message Could Not Be Sent
+          </h3>
+
+          <p id="error-modal-message" class="mt-2 text-sm text-accent/80">
+            We couldn't send your message right now. Please try again later.
+          </p>
+
+          <div class="mt-4 rounded-lg bg-light p-4 text-left">
+            <p class="text-sm text-accent/80">
+              Please check your information and try again. If the problem
+              continues, please contact us directly by email.
+            </p>
+          </div>
+        </div>
+
+        <!-- Close button -->
+        <button
+          id="error-modal-close"
+          type="button"
+          aria-label="Close error message"
+          class="absolute -top-10 right-0 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 </html>
