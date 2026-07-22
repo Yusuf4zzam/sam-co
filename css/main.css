@@ -5,7 +5,7 @@
 /* Variable Font - Normal */
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf")
+  src: url("../../assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -15,7 +15,7 @@
 /* Variable Font - Italic */
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
+  src: url("../../assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
     format("truetype");
   font-weight: 100 900;
   font-style: italic;
@@ -25,7 +25,7 @@
 /* Fallback Regular */
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/DM_Sans/static/DMSans-Regular.ttf")
+  src: url("../../assets/fonts/DM_Sans/static/DMSans-Regular.ttf")
     format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -35,7 +35,7 @@
 /* Fallback Medium */
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/DM_Sans/static/DMSans-Medium.ttf")
+  src: url("../../assets/fonts/DM_Sans/static/DMSans-Medium.ttf")
     format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -45,7 +45,7 @@
 /* Fallback SemiBold */
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf")
+  src: url("../../assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf")
     format("truetype");
   font-weight: 600;
   font-style: normal;
@@ -55,7 +55,8 @@
 /* Fallback Bold */
 @font-face {
   font-family: "DM Sans";
-  src: url("../assets/fonts/DM_Sans/static/DMSans-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/DM_Sans/static/DMSans-Bold.ttf")
+    format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -67,7 +68,7 @@
 
 @font-face {
   font-family: "DM Serif Display";
-  src: url("../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf")
+  src: url("../../assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf")
     format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -76,7 +77,7 @@
 
 @font-face {
   font-family: "DM Serif Display";
-  src: url("../assets/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf")
+  src: url("../../assets/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf")
     format("truetype");
   font-weight: 400;
   font-style: italic;

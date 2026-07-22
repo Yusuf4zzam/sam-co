@@ -1,4 +1,4 @@
-# assets/videos/
+# ../assets/videos/
 
 `hero-reel.mp4` is referenced by the homepage hero (slide 1) and the "Watch
 Our Story" lightbox, but the real file hasn't been supplied yet — both

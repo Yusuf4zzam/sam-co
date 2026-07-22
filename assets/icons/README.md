@@ -1,6 +1,7 @@
-# assets/icons/
+# ../assets/icons/
 
 Favicon files referenced from each page's `<head>`:
+
 - `favicon.png`
 - `favicon-192.png`
 - `favicon-apple-touch.png`

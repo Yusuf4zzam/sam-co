@@ -16,7 +16,7 @@ built to extend cleanly to the rest of the sitemap in the Build Specification.
 ├── partials/
 │   ├── header.html         <header> + mobile nav drawer (shared, fetched at runtime)
 │   └── footer.html         <footer> + back-to-top + video modal (shared)
-├── assets/
+├── ../assets/
 │   ├── images/              Site-owned images (logo, social share images)
 │   ├── videos/               hero-reel.mp4 goes here once supplied
 │   ├── fonts/                 Self-hosted font files (currently using Google Fonts CDN — see fonts/README.md)
