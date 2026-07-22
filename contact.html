@@ -696,6 +696,21 @@
                     </p>
                   </div>
 
+                  <!-- Google reCAPTCHA -->
+                  <div>
+                    <div
+                      class="g-recaptcha"
+                      data-sitekey="6Lew-F4tAAAAAD4yHafv6QfCgRflDlp9yWRV4o0P"
+                    ></div>
+
+                    <p
+                      id="captcha-error"
+                      class="mt-1 hidden text-sm text-secondary-deep"
+                    >
+                      Please verify that you are not a robot.
+                    </p>
+                  </div>
+
                   <!-- Submit -->
                   <button
                     type="submit"
@@ -1452,6 +1467,8 @@ C780,250 860,225 930,200"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Contact Form Handler -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -1726,6 +1743,25 @@ C780,250 860,225 930,200"
             }
 
             return;
+          }
+
+          // Check Google reCAPTCHA
+          const captchaResponse = grecaptcha.getResponse();
+
+          if (!captchaResponse) {
+            const captchaError = document.getElementById("captcha-error");
+
+            if (captchaError) {
+              captchaError.classList.remove("hidden");
+            }
+
+            return;
+          }
+
+          const captchaError = document.getElementById("captcha-error");
+
+          if (captchaError) {
+            captchaError.classList.add("hidden");
           }
 
           // Make sure EmailJS is available
