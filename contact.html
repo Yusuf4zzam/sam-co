@@ -701,6 +701,7 @@
                     <div
                       class="g-recaptcha"
                       data-sitekey="6Lew-F4tAAAAAD4yHafv6QfCgRflDlp9yWRV4o0P"
+                      data-callback="captchaVerified"
                     ></div>
 
                     <p
@@ -1800,6 +1801,14 @@ C780,250 860,225 930,200"
             .then(function (response) {
               // Only reset after EmailJS successfully sends the email.
               form.reset();
+
+              grecaptcha.reset();
+
+              const captchaError = document.getElementById("captcha-error");
+
+              if (captchaError) {
+                captchaError.classList.add("hidden");
+              }
 
               // Clear validation errors
               form
