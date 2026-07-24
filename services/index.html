@@ -126,6 +126,43 @@
         --font-dm-sans: "DM Sans", sans-serif;
       }
     </style>
+
+    <style>
+      /* Make sure all main slides have equal height */
+      .services-main .swiper-wrapper {
+        align-items: stretch;
+      }
+
+      .services-main .swiper-slide {
+        height: auto;
+      }
+
+      /* Active thumbnail */
+      .services-thumbs .swiper-slide-thumb-active .service-thumb {
+        background: var(--color-secondary-deep);
+      }
+
+      .services-thumbs .swiper-slide-thumb-active .service-thumb h3 {
+        opacity: 1;
+        color: var(--color-white) !important;
+      }
+
+      .services-thumbs .swiper-slide-thumb-active .service-thumb span {
+        opacity: 1;
+      }
+
+      .services-thumbs .swiper-slide-thumb-active .service-thumb {
+        opacity: 1;
+      }
+
+      .services-section .services-main .swiper-slide > div {
+        transition: 0.5s;
+      }
+
+      .services-section .services-main .swiper-slide-next > div {
+        background: var(--color-secondary-deep);
+      }
+    </style>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body class="bg-white">
@@ -599,9 +636,7 @@
             </h2>
           </div>
 
-          <div
-            class="mt-14 grid gap-10 sm:mt-16 lg:grid-cols-[1fr_1fr] lg:items-start"
-          >
+          <div class="mt-14 grid gap-10 sm:mt-16 lg:grid-cols-[1fr_1fr]">
             <!-- Left: numbered clickable rows -->
             <div class="space-y-4">
               <div
@@ -826,6 +861,286 @@
         </div>
       </section>
 
+      <!-- Services Section -->
+      <section class="services-section overflow-hidden bg-white py-20 lg:py-28">
+        <div class="px-4">
+          <!-- Thumbs Navigation -->
+          <div
+            class="relative mb-10 flex items-end lg:flex-nowrap flex-wrap gap-6"
+          >
+            <div class="lg:w-fit w-full">
+              <span
+                class="mb-3 block text-sm font-semibold uppercase tracking-[0.2em] text-secondary-deep"
+              >
+                Expertise
+              </span>
+
+              <h2
+                class="font-display text-4xl leading-tight text-primary md:text-5xl"
+              >
+                Services We Offer!
+              </h2>
+            </div>
+
+            <!-- Thumbs Swiper -->
+            <div
+              class="services-thumbs swiper border-2 border-primary rounded-full flex-1"
+            >
+              <div class="swiper-wrapper">
+                <!-- Thumb 01 -->
+                <div class="swiper-slide cursor-pointer">
+                  <div
+                    class="service-thumb sm:py-5 py-4 text-center transition-all duration-300 rounded-full"
+                  >
+                    <h3
+                      class="mt-1 text-sm font-semibold text-primary md:text-base"
+                    >
+                      Strategic Advisory
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- Thumb 02 -->
+                <div class="swiper-slide cursor-pointer">
+                  <div
+                    class="service-thumb sm:py-5 py-4 text-center transition-all duration-300 rounded-full"
+                  >
+                    <h3
+                      class="mt-1 text-sm font-semibold text-primary md:text-base"
+                    >
+                      Business Transformation
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- Thumb 03 -->
+                <div class="swiper-slide cursor-pointer">
+                  <div
+                    class="service-thumb sm:py-5 py-4 text-center transition-all duration-300 rounded-full"
+                  >
+                    <h3
+                      class="mt-1 text-sm font-semibold text-primary md:text-base"
+                    >
+                      Leadership Development
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- Thumb 04 -->
+                <div class="swiper-slide cursor-pointer">
+                  <div
+                    class="service-thumb sm:py-5 py-4 text-center transition-all duration-300 rounded-full"
+                  >
+                    <h3
+                      class="mt-1 text-sm font-semibold text-primary md:text-base"
+                    >
+                      Product Delivery
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Slider -->
+          <div class="relative rounded-2xl overflow-hidden">
+            <div class="services-main swiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 01 -->
+                <div class="swiper-slide">
+                  <div
+                    class="grid overflow-hidden rounded-2xl bg-primary lg:grid-cols-2 items-center p-8 gap-4"
+                  >
+                    <!-- Content -->
+                    <div class="flex flex-col justify-center py-8 text-white">
+                      <h3
+                        class="font-display text-3xl leading-tight md:text-4xl"
+                      >
+                        Strategic Advisory
+                      </h3>
+
+                      <p
+                        class="mt-6 max-w-xl text-base leading-relaxed text-white/70"
+                      >
+                        Direct counsel to executive teams and boards on
+                        strategy, structure, and high-stakes decisions.
+                      </p>
+
+                      <ul
+                        class="mt-8 grid grid-cols-1 gap-3 text-sm text-white/80 sm:grid-cols-2"
+                      >
+                        <li>Strategic Options</li>
+                        <li>Board Briefings</li>
+                        <li>Operating Structure</li>
+                        <li>Direct Access</li>
+                      </ul>
+
+                      <a
+                        href="./services/service-strategic-advisory"
+                        class="mt-10 inline-flex w-fit items-center gap-2 border-b border-white/40 pb-2 text-sm font-semibold text-white transition hover:border-white"
+                      >
+                        Read More
+                        <span>→</span>
+                      </a>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="relative">
+                      <img
+                        src="./../assets/images/services/59.png"
+                        alt="Strategic Advisory"
+                        class="object-cover transition-transform duration-700 aspect-[4/4] p-4 bg-white rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 02 -->
+                <div class="swiper-slide">
+                  <div
+                    class="grid overflow-hidden rounded-2xl bg-primary lg:grid-cols-2 items-center p-8 gap-4"
+                  >
+                    <div class="flex flex-col justify-center py-8 text-white">
+                      <h3
+                        class="font-display text-3xl leading-tight md:text-4xl"
+                      >
+                        Business Transformation
+                      </h3>
+
+                      <p
+                        class="mt-6 max-w-xl text-base leading-relaxed text-white/70"
+                      >
+                        Hands-on delivery support that carries a change program
+                        from design through to adoption.
+                      </p>
+
+                      <ul
+                        class="mt-8 grid grid-cols-1 gap-3 text-sm text-white/80 sm:grid-cols-2"
+                      >
+                        <li>Program Delivery</li>
+                        <li>Change Management</li>
+                        <li>Operating Model</li>
+                        <li>Adoption Support</li>
+                      </ul>
+
+                      <a
+                        href="./services/service-business-transformation"
+                        class="mt-10 inline-flex w-fit items-center gap-2 border-b border-white/40 pb-2 text-sm font-semibold text-white transition hover:border-white"
+                      >
+                        Read More
+                        <span>→</span>
+                      </a>
+                    </div>
+
+                    <div class="relative">
+                      <img
+                        src="./../assets/images/services/89.png"
+                        alt="Business Transformation"
+                        class="object-cover transition-transform duration-700 aspect-[4/4] p-4 bg-white rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 03 -->
+                <div class="swiper-slide">
+                  <div
+                    class="grid overflow-hidden rounded-2xl bg-primary lg:grid-cols-2 items-center p-8 gap-4"
+                  >
+                    <div class="flex flex-col justify-center py-8 text-white">
+                      <h3
+                        class="font-display text-3xl leading-tight md:text-4xl"
+                      >
+                        Leadership Development
+                      </h3>
+
+                      <p
+                        class="mt-6 max-w-xl text-base leading-relaxed text-white/70"
+                      >
+                        Practical leadership and capability-building programs
+                        designed around your team's real work.
+                      </p>
+
+                      <ul
+                        class="mt-8 grid grid-cols-1 gap-3 text-sm text-white/80 sm:grid-cols-2"
+                      >
+                        <li>Leadership Programs</li>
+                        <li>Capability Building</li>
+                        <li>Workshop Design</li>
+                        <li>Team Coaching</li>
+                      </ul>
+
+                      <a
+                        href="./services/service-leadership-development"
+                        class="mt-10 inline-flex w-fit items-center gap-2 border-b border-white/40 pb-2 text-sm font-semibold text-white transition hover:border-white"
+                      >
+                        Read More
+                        <span>→</span>
+                      </a>
+                    </div>
+
+                    <div class="relative">
+                      <img
+                        src="./../assets/images/services/74.png"
+                        alt="Leadership Development"
+                        class="object-cover transition-transform duration-700 aspect-[4/4] p-4 bg-white rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 04 -->
+                <div class="swiper-slide">
+                  <div
+                    class="grid overflow-hidden rounded-2xl bg-primary lg:grid-cols-2 items-center p-8 gap-4"
+                  >
+                    <div class="flex flex-col justify-center py-8 text-white">
+                      <h3
+                        class="font-display text-3xl leading-tight md:text-4xl"
+                      >
+                        Product Delivery
+                      </h3>
+
+                      <p
+                        class="mt-6 max-w-xl text-base leading-relaxed text-white/70"
+                      >
+                        Structured working sessions that turn executive offsites
+                        and planning cycles into decisions.
+                      </p>
+
+                      <ul
+                        class="mt-8 grid grid-cols-1 gap-3 text-sm text-white/80 sm:grid-cols-2"
+                      >
+                        <li>Executive Offsites</li>
+                        <li>Planning Sessions</li>
+                        <li>Decision Workshops</li>
+                        <li>Stakeholder Alignment</li>
+                      </ul>
+
+                      <a
+                        href="./services/service-product-delivery"
+                        class="mt-10 inline-flex w-fit items-center gap-2 border-b border-white/40 pb-2 text-sm font-semibold text-white transition hover:border-white"
+                      >
+                        Read More
+                        <span>→</span>
+                      </a>
+                    </div>
+
+                    <div class="relative">
+                      <img
+                        src="./../assets/images/services/66.png"
+                        alt="Product Delivery"
+                        class="object-cover transition-transform duration-700 aspect-[4/4] p-4 bg-white rounded-xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ OUR EXPERIENCE ============ -->
       <section class="bg-light py-20 sm:py-24">
         <div
@@ -898,6 +1213,8 @@
             <div class="mt-9 flex flex-wrap items-center gap-6">
               <a
                 href="https://calendly.com/samandco"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-md bg-secondary-deep px-7 py-3.5 font-semibold text-white transition-colors duration-300 hover:bg-primary"
                 >Start a Project</a
               >
@@ -1662,7 +1979,7 @@
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/samandco.consulting.ca/"
+                  href="https://www.instagram.com/samandco.consulting.ca?igsh=ZHNzYzZpcmpqcXZy"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="hover:text-secondary flex gap-2 flex-row-reverse justify-end items-center"
@@ -1683,7 +2000,7 @@
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/samandco.consulting.ca/"
+                  href="https://www.facebook.com/share/198oMUHjAn/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="hover:text-secondary flex gap-2 flex-row-reverse justify-end items-center"
@@ -1781,5 +2098,53 @@
     <script src="../js/swiper.js"></script>
     <script src="../js/lenis.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Thumbs Swiper
+        const servicesThumbs = new Swiper(".services-thumbs", {
+          spaceBetween: 0,
+          slidesPerView: 1.5,
+          watchSlidesProgress: true,
+
+          breakpoints: {
+            640: {
+              slidesPerView: 2.5,
+            },
+
+            768: {
+              slidesPerView: 3.5,
+            },
+
+            1024: {
+              slidesPerView: 4,
+            },
+          },
+        });
+
+        // Main Swiper
+        const servicesMain = new Swiper(".services-main", {
+          spaceBetween: 30,
+          slidesPerView: 1,
+          breakpoints: {
+            1024: {
+              slidesPerView: 1.7,
+            },
+          },
+
+          speed: 700,
+
+          loop: true,
+
+          autoHeight: true,
+
+          effect: "slide",
+
+          thumbs: {
+            swiper: servicesThumbs,
+          },
+        });
+      });
+    </script>
   </body>
 </html>
